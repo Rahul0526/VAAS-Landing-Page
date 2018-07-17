@@ -1,0 +1,166 @@
+header.haeader-panel
+	position: fixed
+	top: 0
+	right: 0
+	width: 100%
+	z-index: 99
+	height: 80px
+	pointer-events: none
+	&:after
+		transform-origin: right center
+		transform: scale(1)
+		transition: all linear 0.3s
+	a
+		pointer-events: initial
+	.logo
+		margin: 30px 0 0
+		// opacity: 0.3
+		transition: all linear 0.5s
+		position: relative
+		opacity: 0
+		svg
+			width: 180px
+			height: 45px
+			stroke-width: 0.5px
+			stroke-location: outside
+			filter: none
+			padding: 0
+			// animation: changeColor linear 30s infinite
+			transition: all linear 0.5s
+			// animation: none
+			fill: black
+			filter: drop-shadow(-1px -0.7px 0px currentColor) drop-shadow(-2px -1.4px 0px currentColor) drop-shadow(-3px -2.1px 0px currentColor) drop-shadow(0 0px 10px currentColor)
+		img
+			margin-left: -60px
+		&.show
+			opacity: 1
+
+	.navbar
+		text-align: center
+		margin: 44px 0 0
+		top: 20px
+		// float: left
+		transition: all linear 0.5s
+		
+		.navbar-nav
+			margin: 0
+			margin: 0 auto
+			display: flex
+			width: 650px
+			flex-directon: row
+			justify-content: space-between
+			li
+				display: inline-block
+				padding: 0
+				// margin: 0 60px
+				// float: left
+				a
+					font-size: 19px
+					text-transform: uppercase
+					color: $white
+					font-weight: 500
+					&:hover
+						color: $blue_color
+						text-decoration: none
+
+
+	nav.navbar-default
+		background: none
+		border: 0
+		ul
+			li
+
+	.login-signup
+		position: absolute
+		right: 20px
+		top: 72px
+		z-index: 1
+		transition: all linear 0.3s
+		a
+			// padding: 8px 39px
+			// font-size: 19px
+			// text-transform: uppercase
+			// color: $white
+			// font-weight: 300
+		// .signup
+		// 	font-weight: 500
+		// 	border: 1px solid #8abff1
+		// 	border-radius: 24px
+		// 	padding: 0
+		// 	border-color: transparent
+		// 	margin-left: 10px
+		// 	font-weight: 700
+
+	&.sticky
+		background: $headerBg
+		&:after
+			transform: scale(0)
+		.logo
+			margin: 0
+			img
+				height: 80px
+			svg
+				height: 30px
+				width: 130px
+		.navbar
+			top: 0
+			margin-top: 0
+			padding: 0
+			li
+				a
+					line-height: 80px
+					display: inline-block
+		.login-signup
+			top: 24px
+
+.btn
+	display: inline-block
+	float: left
+	padding: 5px 20px
+	color: $white
+	border-radius: 5px
+	text-transform: uppercase
+	font-weight: 500
+	letter-spacing: 1px
+	border: 1px solid currentColor
+	margin-right: 20px
+	&:last-of-type
+		margin-right: 0
+
+	&.signin
+		color: $purple
+
+	&.signup
+		color: $blue_color
+	
+	&.trackBg
+		position: relative
+		overflow: hidden
+		trnasition: all linear 0.3s
+		span
+			position: relative
+			z-index: 2
+		.bg
+			position: absolute
+			width: calc(200% + 20px)
+			height: calc(200% + 20px)
+			top: calc(-100% - 10px)
+			left: calc(-100% - 10px)
+			z-index: 0
+			opacity: 0
+			transition: opacity linear 0.3s
+
+			background-image: radial-gradient($blue_color, $purple)
+		&.signin
+			.bg
+				background-image: radial-gradient(#D4D5FE, $purple, $purple)
+		&.signup
+			.bg
+				background-image: radial-gradient(#9DD6F9, $blue_color, $blue_color)
+
+
+		&:hover
+			.bg
+				opacity: 1
+			color: $white
+			border-color: transparent

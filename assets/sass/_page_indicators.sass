@@ -1,0 +1,160 @@
+//colors
+$color_cornflower_blue_approx: #6e74fa
+$color_indigo_approx: #474dcf
+$mine_shaft: #323232
+$color_azure_radiance_approx: #007ee5
+$color_shark_approx: #292626
+
+.page-indicators
+	position: fixed !important
+	left: auto
+	right: 0
+	top: 0px
+	z-index: 99999 !important
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-content: center
+	height: 100%
+	pointer-events: none
+	width: 20px
+	background-color: transparent
+	ul
+		padding: 0
+		border-radius: 0
+		margin: 0
+		display: inline-block
+		float: left
+		list-style: none
+		width: 100%
+		position: relative
+		// overflow: hidden
+		border-radius: 6px
+		// background-color: $panelBg
+		li
+			display: block
+			width: 100%
+			height: 50px
+			background-color: transparent
+			cursor: pointer
+			transition: all ease-in-out 0.3s
+			box-sizing: border-box
+			position: relative
+			pointer-events: initial
+			padding: 0
+			left: 0
+			margin: 5px 0
+			// border-radius: 6px
+			// background-color: $panelBg
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				background-color: $panelBg
+				width: 6px
+				height: 100%
+				border-radius: 6px
+				transition: all linear 0.3s
+			// border-left: 2px solid $mine_shaft
+			
+			span
+				width: 30px
+				height: 30px
+				border-radius: 0
+				line-height: 30px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-content: center
+				text-align: center
+				position: relative
+				font-size: 12px
+				transition: 1s
+				color: $textColor
+				display: none
+				svg
+					fill: currentColor
+					height: auto
+					width: 20px
+					float: none
+					margin: auto
+
+			label
+				position: absolute
+				left: 30px
+				top: 50%
+				transform: translateY(-50%)
+				line-height: 20px
+				padding: 5px 5px 5px 20px
+				pointer-events: none
+				opacity: 0
+				transition: all ease-in-out 0.3s
+				display: inline-block
+				width: 150px
+				background-color: $panelBg
+				z-index: -1
+				min-height: 30px
+				overflow: hidden
+				cursor: inherit
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					width: 20px
+					height: 100%
+					background: linear-gradient(90deg, transparentize($black, 0.7), transparent)
+			
+			&.active 
+				span
+					font-weight: 600
+					color: $white
+				label
+					background-color: $color_azure_radiance_approx
+
+
+			&:hover
+				&:before
+					background-color: transparentize($color_azure_radiance_approx, 0.5)
+				label
+					pointer-events: initial
+					opacity: 1
+				span
+					color: $white
+					// filter: drop-shadow(0 0 10px $black)
+					// background-color: $panelBg
+			
+		.indicator
+			color: $color_azure_radiance_approx
+			top: 0
+			left: 50%
+			margin: 0
+			position: absolute
+			display: inline-block
+			pointer-events: initial
+			background-color: currentColor
+			transition: all ease-in-out 0.7s
+			z-index: 2
+			width: 6px
+			// width: 100%
+			transform: translateX(-50%)
+			height: 50px
+			border-radius: 10px
+			filter: drop-shadow(0 0 3px currentColor)
+			cursor: pointer
+			&:before
+			&.dragging
+				transition-duration: 0.2s
+	
+// @keyframes glowing
+// 	0%
+// 		background-color: $color_cornflower_blue_approx
+// 		box-shadow: 0 0 3px $color_cornflower_blue_approx
+// 	50%
+// 		background-color: $color_indigo_approx
+// 		box-shadow: 0 0 40px $color_indigo_approx
+// 	100%
+// 		background-color: $color_cornflower_blue_approx
+// 		box-shadow: 0 0 3px $color_cornflower_blue_approx

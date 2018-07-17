@@ -1,0 +1,60 @@
+.systemInitialization
+	position: fixed
+	text-align: center
+	color: $white
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 9
+	display: none
+	pointer-events: none
+	h1
+		font-size: 120px
+		font-weight: 700
+		letter-spacing: 10px
+	h2
+		font-size: 40px
+		line-height: 60px
+		letter-spacing: 5px
+		padding-left: 20px
+	.box
+		display: table
+		float: none
+		margin: auto
+		// opacity: 0
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		transform: translateX(-50%) translateY(-50%)
+	.msg3
+		transform: none
+		top: 0
+		left: 0
+		height: 100%
+		display: flex
+		flex-direction: column
+		// justify-content: space-between
+		.vertical-block
+			display: flex
+			// flex-direction: column
+			// justify-content: center
+			&.vb1
+				// height: 40%
+			&.vb2
+				// height: 60%
+				margin-top: -20px
+			& > *
+				display: table
+				float: none
+				margin: auto
+
+		img
+			transform: scale(1.5)
+			// bottom: 100px
+			// left: 0
+			// top: auto
+			// transform: none
+
+		// opacity: 1

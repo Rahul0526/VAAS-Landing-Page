@@ -1,0 +1,86 @@
+section.block.eighth-slide
+	// z-index: 2 !important
+	.bgi
+		z-index: 2 !important
+		// &:before
+		// 	content: ''
+		// 	position: absolute
+		// 	top: -5px
+		// 	left: 0
+		// 	transform-origin: top left
+		// 	transform: skewY(15deg)
+		// 	background-color: $white
+		// 	width: 100%
+		// 	height: 5px
+
+	.section-body
+		padding: 0 0
+		z-index: 9
+		height: 1000px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-content: center
+
+	.sec-title
+		margin-bottom: 50px
+
+	.description
+		width: 100%
+		perspective: 550px
+		.secure-cont
+			padding-top: 0
+			float: right
+			width: 33%
+			transform-origin: left center
+			transform: rotateY(10deg)
+			ul
+				li
+					line-height: 30px
+
+	.video-container
+		transform: scale(1)
+		position: absolute
+		right: 40%
+		top: 100px
+		margin-top: 0
+		width: auto
+		perspective: 550px
+		// height: 
+		// margin-top: -150px
+		.video-wrapper, video
+			width: 100%
+			filter: none
+			border: none
+			box-shadow: none
+		video
+			width: auto
+			height: 800px
+
+		.video-wrapper
+			box-shadow: none
+			border-radius: 5px
+			overflow: hidden
+			&:before
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 50%
+				background: linear-gradient(0deg, $bodyBg, transparent)
+
+			.controls-strip
+				background-color: transparent
+
+			&.right-bent
+				transform-origin: right center
+				transform: rotateY(10deg)
+			// transform-origin: bottom center
+			// transform: rotateX(40deg) scale(1.3, 1)
+	.sec-title, .secure-cont ul li, .video-container
+		opacity: 0
+
+	&.loaded
+		.sec-title, .secure-cont ul li, .video-container
+			opacity: 1

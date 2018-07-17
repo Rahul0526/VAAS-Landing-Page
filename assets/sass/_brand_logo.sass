@@ -1,0 +1,320 @@
+.filter
+	#gradient
+		.stop1
+			stop-color: $white
+		.stop2
+			stop-color: $blue_color
+		.stop3
+			stop-color: $orange_color
+		.stop4
+			stop-color: $teal-purple
+		.stop5
+			stop-color: $white
+.first-slide
+	// padding-top: 80px
+	// padding-bottom: 30px
+	.bot-cont
+		display: inline-block
+.slide-logo, .logo
+	perspective: 700px
+	transform-style: preserve-3D
+	svg
+		width: 600px
+		height: 200px
+		// opacity: 0.5
+		color: #69e5ff
+		.fil0
+			stroke-width: 5px
+			stroke: #69e5ff
+			stroke-opacity: 0.5
+			filter: drop-shadow(0 0 5px #69e5ff)
+
+.slide-logo
+	// filter: drop-shadow(0 0 50px #12BBDF)
+	img
+		width: auto
+		max-width: unset
+		height: 250px
+
+.logo
+	animation: changeColor linear 20s infinite
+
+.get-started
+	margin-top: -32px
+	.input-field
+		background-color: transparent
+		border-radius: 10px
+		position: relative
+		overflow: hidden
+		opacity: 1
+		width: 620px
+		padding: 2px
+		height: 60px
+		opacity: 1
+		transform: scale(1)
+		// transition: transfrom linear 0.5s 1s, width linear 0.5s 0s
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 100px
+			height: 120px
+			top: -150px
+			left: calc(0% - 300px)
+			background-color: $white
+			transform: rotate(30deg)
+			box-shadow: 0 150px 150px transparentize($white, 0.2), 0 150px 150px transparentize($white, 0.2), 0 150px 50px transparentize($white, 0.3)
+			z-index: 0
+			// transition: all linear 0s
+		
+		&:hover
+			&:before
+				// left: 50%
+				animation: inputShine 1s linear
+		input
+			border: none
+			// border-radius: 50px
+			height: 56px
+			font-size: 26px
+			padding: 0 56px 3px 0
+			// text-indent: 70px
+			width: 100%
+			// background-color: transparent
+			// background-color: transparentize(#4399E9, 0.75)
+			background: linear-gradient(90deg, transparentize(#6AD8FA, 0.2), transparentize(#277EF7, 0.5))
+			box-shadow: -15px 20px 50px -10px #2692D2 inset
+			// color: transparentize($white, 0.5)
+			color: $white
+			outline: none !important
+			// transition: all linear 0.3s 1s
+			font-weight: 500
+			letter-spacing: 0.6px
+			border: 2px solid transparentize(#AFE5F2, 0.4)
+			z-index: 2
+			// transition: all linear 0.7s 1s
+			text-indent: 18px
+			border-radius: 10px
+			&::placeholder
+				color: transparentize($white, 0.5)
+		.search
+			opacity: 1
+			// transition: all linear 0.3s 0s
+			height: 100%
+			padding: 0
+			right: 0
+			.arrow
+				display: inline-block
+				position: absolute
+				width: 20px
+				height: 2px
+				color: #85DFFB
+				background-color: currentColor
+				border-radius: 5px
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+				transition: all linear 0.2s
+				// transition: all linear 0.5s
+				opacity: 0.8
+
+				&:before, &:after
+					content: ''
+					position: absolute
+					width: 12px
+					height: 2.5px
+					background-color: currentColor
+					border-radius: 2px
+					right: -8px
+					transform-origin: right center
+				&:before
+					transform: rotate(35deg)
+				&:after
+					transform: rotate(-35deg)
+		&:hover
+			.search
+				.arrow
+					opacity: 0.9
+					filter: drop-shadow(0 0 5px $white)
+					// color: $blue_color
+
+
+// .get-started
+// 	.input-field
+// 		transition: transform cubic-bezier(.39,1.03,.65,2.64) 0.3s 0.7s, width linear 0.8s 1s, padding linear 0.3s 2s, height linear 0.3s 2s
+// 		width: 620px
+// 		padding: 2px
+// 		height: 60px
+// 		opacity: 1
+// 		transform: scale(1)
+// 		// border-radius: 10px
+// 		&:after
+// 			animation: inputShine 0.8s linear
+// 			animation-delay: 1.8s
+// 		input
+// 			// padding-left: 18px
+// 			transition: all linear 0.7s 1s
+// 			text-indent: 18px
+// 			border-radius: 10px
+
+// 			// transition-delay: 2s
+// 		a
+// 			opacity: 1
+// 			transition-delay: 2s
+// 		.search
+// 			transition: all linear 0.3s 1s
+// 			right: 0
+// 			.arrow
+// 				transition: all linear 0.5s
+.video-slide
+	.intro-slide
+		padding: 0
+		display: table
+		float: none
+		margin: 60px auto 0
+		position: relative
+		perspective: 700px
+		transform-style: preserve-3D
+		img
+			max-width: 1190px
+	.slide
+		position: absolute
+		width: 100%	
+		height: 100%
+		left: 0
+		top: 0
+		transform-origin: bottom center
+		&.slide1
+			transform: translateY(-16px) scale(1, 0.97)
+		&.slide2
+			transform: translateY(-37px) scale(0.99, 0.90)
+		&.slide3
+			transform: translateY(-70px) translateX(5px) scale(0.98, 0.84)
+		&.slide4
+			transform: translateY(-115px) translateX(5px) scale(0.97, 0.75)
+	a.play
+		top: 11px
+		bottom: auto
+		margin-left: -57px
+		filter: drop-shadow(0 0 50px #2BC7BA) drop-shadow(0 0 20px transparentize(#2BC7BA, 0.8))
+
+
+section.animating
+	&.loading
+		.slide-logo
+			animation: changeColor linear 20s infinite
+			svg
+				// stroke-dasharray: 0
+				// fill: black
+				// filter: drop-shadow(0 1px 0px currentColor) drop-shadow(0 2px 0px currentColor) drop-shadow(0 3px 0px currentColor) drop-shadow(0 4px 0px currentColor) drop-shadow(0 0px 10px currentColor)
+				// transition: stroke-dasharray 3s linear, fill linear 0.3s 3s, filter 1s linear 1.8s
+				animation: drawLogo linear 2s
+				animation-fill-mode: forwards
+				// animation: flashLogo linear 0.5s 3s
+				path
+					transition: inherit
+	&:not(.loading)
+		.slide-logo
+			svg
+				stroke-dasharray: 0
+				// fill: black
+				// filter: drop-shadow(0 1px 0px currentColor) drop-shadow(0 2px 0px currentColor) drop-shadow(0 3px 0px currentColor) drop-shadow(0 4px 0px currentColor) drop-shadow(0 0px 10px currentColor)
+				// path
+					// animation: flashLogo linear 0.5s infinite 3s
+
+
+
+
+	// .video-slide
+	// 	.slide
+	// 		transition: all ease-out 0.2s
+
+	// 		// &.slide1
+	// 		// 	top: 15px
+	// 		// &.slide2
+	// 		// 	top: 25px
+	// 		// &.slide3
+	// 		// 	top: 50px
+	// 		// &.slide4
+	// 		// 	top: 80px
+	// 		&.slide1
+	// 			transform: translateY(-16px) scale(1, 0.97)
+	// 			transition-duration: 0s
+	// 		&.slide2
+	// 			transform: translateY(-37px) scale(0.99, 0.90)
+	// 			transition-duration: 0.1s
+	// 		&.slide3
+	// 			transform: translateY(-70px) translateX(5px) scale(0.98, 0.84)
+	// 			transition-duration: 0.2s
+	// 		&.slide4
+	// 			transform: translateY(-115px) translateX(5px) scale(0.97, 0.75)
+	// 			transition-duration: 0.3s
+	// 	a.play
+	// 		transition: all cubic-bezier(.51,.66,.46,1.77) 0.4s 0s
+
+.testClippath
+	clip-path: url(#id0)
+
+// 	.slide-logo
+// 		svg path
+// 			// fill: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9ImNpcmNsZSIgY3k9IiIgcj0iMzAlIj48c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjQ1Ii8+PHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g')
+// 			// fill: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDFhMDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYWZmMWEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=')
+// 			stroke: url(#pattern)
+// 			fill: transparent
+// 			// animation: logoGlow linear 10s infinite
+// 			// path
+// 			// 	animation: slideLogo linear 1s infinite
+
+@keyframes changeColor
+	0%
+		color: $purple
+	33%
+		color: $blue_color
+	66%
+		color: $teal-purple
+	100%
+		color: $purple
+
+@keyframes inputShine
+	from
+		left: calc(0% - 300px)
+	to
+		left: calc(100% + 300px)
+
+@keyframes flashLogo
+	0%, 100%
+		filter: none
+		fill: transparent
+	30%, 70%
+		filter: drop-shadow(0 0 15px $white) drop-shadow(0 0 15px $white)
+		fill: $white
+
+
+@keyframes drawLogo
+	0%
+		stroke-dasharray: 130
+		stroke-dashoffset: -130
+		fill: transparent
+		stroke: currentColor
+		filter: none
+	// 35%
+	// 	stroke-dasharray: 30
+	// 	stroke-dashoffset: -130
+	50%, 60%
+		stroke-dasharray: 130
+		stroke-dashoffset: 0
+		stroke: currentColor
+		fill: transparent
+		filter: none
+	70%, 80%
+		fill: $white
+		filter: drop-shadow(0 0 15px $white)
+		stroke: $white
+	90%
+		fill: $black
+		// filter: none
+		stroke: currentColor
+	100%
+		stroke-dasharray: 130
+		stroke-dashoffset: 0
+		fill: $black
+		filter: drop-shadow(0 1px 0px currentColor) drop-shadow(0 2px 0px currentColor) drop-shadow(0 3px 0px currentColor) drop-shadow(0 4px 0px currentColor) drop-shadow(0 0px 10px currentColor)
+

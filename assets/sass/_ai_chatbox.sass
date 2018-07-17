@@ -1,0 +1,403 @@
+$aiThumb: #001734
+.ai-chatbox
+	position: fixed
+	z-index: 99999999
+	top: calc(100% - 80px)
+	left: calc(100% - 80px)
+	display: inline-block
+	trnasition-delay: 0s
+	.ai-thumb
+		width: 60px
+		height: 60px
+		background-color: transparent
+		border-radius: 100%
+		padding: 0
+		filter: drop-shadow(0 0 10px $white)
+		cursor: pointer
+		z-index: 2
+		img
+			width: 100%
+			height: auto
+
+	.chat-container
+		position: absolute
+		// min-width: 250px
+		// height: 400px
+
+		height: 20px
+		width: 30px
+		right: calc(100% + 15px)
+		bottom: 16px
+		background-color: $white
+		color: $textColor
+		border-radius: 5px
+		pointer-events: none
+		opacity: 0
+		// transition: all ease-in-out 0.3s
+		z-index: 1
+		&:before
+			content: ''
+			position: absolute
+			width: 30px
+			height: 20px
+			border-radius: 0 0 0 100%
+			// transform: skewY(30deg)
+			transform-origin: top left
+			border-left: 10px solid $white
+			left: auto
+			right: -20px
+			top: calc(100% - 10px)
+			transition: all ease-in-out 0.3s
+		&:after
+			content: ''
+			position: absolute
+			width: 50px
+			height: 50px
+			left: calc(100% - 10px)
+			bottom: -10px
+			background-color: transparent
+			// background-color: white
+	
+	.dummy-msg
+		white-space: pre
+		padding: 5px 10px
+		transition: all ease-in-out 0.15s 0.3s
+		opacity: 0
+		width: 100%
+		height: 100%
+		overflow: hidden
+		pointer-events: none
+
+	.ai-startup
+		position: absolute
+		float: left
+		width: 100%
+		height: 100%
+		background-color: transparentize($bodyBg, 0.1)
+		top: 0
+		left: 0
+		border-radius: 0px
+		pointer-events: none
+		opacity: 0
+		color: $textColorLight
+		.startup-header
+			position: relative
+			width: 100%
+			height: 250px
+			background-color: transparentize($white, 0.98)
+			.ai-welcome-msg
+				position: absolute
+				left: 0
+				bottom: 10px
+				width: 100%
+				text-align: center
+			.ai-name
+				margin: 0 0 5px
+				line-height: 20px
+				position: absolute
+				top: 110px
+				left: 25px
+				font-weight: 700
+			img
+				position: absolute
+				left: 100px
+				top: 25px
+				width: 180px
+		
+		.startup-form
+			width: 100%
+			padding: 30px
+			.input-wrap
+				text-align: center
+				margin: 0 0 10px
+			input.name-input
+				width: 150px
+				border: none
+				background-color: transparent
+				border-bottom: 1px solid $purple
+				color: $white
+				padding: 0 10px
+				text-align: center
+				&.error
+					border-color: red
+			button
+				border: none
+				background-color: transparent
+				cursor: pointer
+
+			.start
+				padding: 5px 20px
+				background-color: $purple
+				color: $white
+				border-radius: 5px
+				margin: 10px 0 0
+			.skip
+				color: $purple
+
+	.chat-wrapper
+		float: left
+		width: 100%
+		height: 100%
+		position: absolute
+		overflow: hidden
+		border-radius: 5px
+		opacity: 0
+		pointer-events: none
+		top: 0
+		left: 0
+		display: none
+		// transition: all ease-in-out 0.3s
+		.chat-header,
+		.chat-body,
+		.chat-footer
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 60px
+			background-color: transparentize($bodyBg, 0.2)
+		.chat-header
+			padding: 17px
+			overflow: hidden
+			img
+				height: 100%
+				float: none
+				margin: auto
+				display: table
+				filter: drop-shadow(0 0 50px $blue_color) drop-shadow(0 0 20px $blue_color)
+		.chat-body
+			height: calc(100% - 110px)
+			top: 60px
+			left: 0
+			background-color: transparentize($textColor, 0.9)
+			overflow: auto
+		.chat-footer
+			top: auto
+			bottom: 0
+			width: 100%
+			height: 50px
+			background-color: transparentize($bodyBg, 0.8)
+			filter: drop-shadow(0 0 3px transparentize($textColor, 0.5))
+				
+			// .chatmsg
+			.msg-wrap
+				position: absolute
+				width: calc(100% - 37px)
+				height: 40px
+				padding: 3px 10px 2px 10px
+				border-radius: 5px
+				top: 5px
+				left: 5px
+				z-index: 1
+				font-size: 14px
+				background-color: $white
+				overflow: hidden
+
+				.chatmsg
+					display: none
+					float: left
+					width: 100%
+					min-height: 30px
+				textarea
+					position: absolute
+					width: 100%
+					height: 100%
+					// opacity: 0
+					padding: 10px 10px 5px
+					top: 0
+					left: 0
+					resize: none
+					border: none
+					z-index: -99
+
+			.sendMsg
+				position: absolute
+				top: 0
+				right: 0
+				width: 30px
+				height: 50px
+				z-index: 2
+				background-color: transparent
+				border: none
+				padding: 4px
+				cursor: pointer
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-content: center
+				// opacity: 0.5
+				transition: all linear 0.3s 0s
+				outline: none !important
+				svg
+					fill: $white
+				&:hover, &:focus
+					opacity: 1
+
+	.date-saperator
+		display: inline-block
+		float: left
+		width: 100%
+		text-align: center
+		padding: 3px
+		font-size: 12px
+		background-color: transparentize($black, 0.95)
+		margin: 10px 0 0
+	
+	.chat-msg
+		display: inline-block
+		clear: both
+		border-radius: 5px
+		background-color: $white
+		font-size: 14px
+		padding: 5px 10px
+		margin: 10px 10px 0
+		filter: drop-shadow(0 0 3px transparentize($textColor, 0.5))
+		position: relative
+		line-height: 18px
+		white-space: pre-line
+		max-width: calc(100% - 40px)
+		transition: all ease-in-out 0.15s
+		&:last-child
+			margin-bottom: 10px
+		&:before
+			content: ''
+			position: absolute
+			// width: 10px
+			// height: 10px
+			border-width: 5px 3px
+			border-style: solid
+			border-color: $white transparent transparent $white
+			// border-top: 5px solid $white
+
+			// border-left: 5px solid $white
+			top: 0
+			right: -4px
+			// border-radius: 5px 5px 0 0
+		&:after
+			content: ''
+			display: inline-block
+			width: 40px
+			height: 15px
+		.msg_time
+			content: attr(data-time)
+			position: absolute
+			bottom: 5px
+			right: 5px
+			font-size: 9px
+			opacity: 0.5
+		&.ai-msg
+			float: left
+			border-top-left-radius: 0
+			&:before
+				right: auto
+				left: -4px
+				border-color: $white $white transparent transparent
+			& + .ai-msg
+				margin-top: 5px
+				border-radius: 5px
+				&:before
+					display: none
+
+		&.user-msg
+			float: right
+			border-top-right-radius: 0
+			opacity: 0.5
+			& + .user-msg
+				margin-top: 5px
+				border-radius: 5px
+				&:before
+					display: none
+			&:hover
+				opacity: 1
+
+	&.active, &:hover
+		.chat-container
+			transition: all ease-in-out 0.3s
+			opacity: 1
+			pointer-events: initial
+			height: 35px
+			width: 190px
+			transform-origin: bottom left
+		.dummy-msg
+			opacity: 1
+
+	&.left
+		.chat-container
+			right: auto
+			left: calc(100% + 15px)
+			&:before
+				right: auto
+				left: -20px
+				border-left: none
+				border-right: 10px solid $white
+				border-radius: 0 0 100% 0
+			&:after
+				left: auto
+				right: calc(100% - 10px)
+		.ai-thumb
+			img
+				transform: rotateY(180deg)
+	&.upper
+		.chat-container
+			bottom: auto
+			top: calc(100% - 35px)
+			right: 70px
+			transform-origin: bottom right
+			&:before
+				top: calc(100% - 10px)
+		&:hover
+			.chat-container
+				top: calc(100% - 50px)
+				&:before
+
+					top: calc(100% - 10px)
+
+	&.active
+		.chat-container
+			height: 450px
+			width: 300px
+			bottom: 0
+			right: 70px
+			&:before
+				width: 0
+				height: 0
+				right: 30px
+
+		.dummy-msg
+			opacity: 0
+			trnasition-delay: 0s
+		.chat-wrapper, .ai-startup
+			transition: all ease-in-out 0.3s 0.3s
+			opacity: 1
+			pointer-events: initial
+
+		&.upper
+			.chat-container
+				bottom: auto
+				top: calc(100% - 60px)
+				right: 70px
+
+		&.left
+			.chat-container
+				left: 70px
+				bottom: 0
+				&:before
+					right: auto
+					left: 30px
+
+	&.animating
+		.chat-container
+			transition: all ease-in-out 0.3s
+			opacity: 1
+			width: 0
+			height: 0
+			overflow: hidden
+			&:before
+				display: none
+	&.ui-draggable-dragging, &.moving
+		.chat-container
+			pointer-events: none
+			opacity: 0
+			transition: none !important
+		.ai-thumb
+			cursor: grab

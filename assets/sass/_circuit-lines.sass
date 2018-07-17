@@ -1,0 +1,164 @@
+#linear
+	.stop1
+		stop-color: $purple
+	.stop2
+		stop-color: $teal_color
+.circuitlines
+	position: absolute
+	left: 0
+	width: 100%
+	fill: transparent
+	stroke-width: 2px
+	stroke-linecap: round
+	stroke: transparentize($blue_color,0)
+	&.top
+		top: 0
+	&.bottom
+		bottom: 0
+	&.middle
+		top: 50%
+		transform: translateY(-50%)
+	.line
+		filter: drop-shadow(0 0 15px transparentize($teal-purple, 0.5)) drop-shadow(0 0 5px transparentize($teal-purple, 0.5))
+		stroke: $blue_color
+		stroke: url(#linear)
+		&.line1
+			stroke-dasharray: 200 170 175 370 100 150
+			stroke-dashoffset: 0
+		&.line2
+			stroke-dasharray: 70 195 160 310 60 180
+			stroke-dashoffset: 0
+		&.line3, &.line16
+			stroke-dasharray: 190 295 50 195 200 375 90 235
+			stroke-dashoffset: 0
+		&.line4, &.line15
+			stroke-dasharray: 160 385 350 335 60 295
+			stroke-dashoffset: 0
+		&.line5
+			stroke-dasharray: 160 500 164 315 30 220
+			stroke-dashoffset: 0
+		&.line6
+			stroke-dasharray: 10 360 70 230 180 420
+			stroke-dashoffset: 0
+		&.line7
+			stroke-dasharray: 350 614 64 276 136 700
+			stroke-dashoffset: 0
+		&.line8
+			stroke-dasharray: 70 370 162 354 49 471
+			stroke-dashoffset: 0
+		&.line9
+			stroke-dasharray: 134 570 246 290
+			stroke-dashoffset: 0
+		&.line10, &.line11
+			stroke-dasharray: 145 654 248 351
+			stroke-dashoffset: 600
+	.circle
+		stroke: transparent
+		fill: $blue_color
+		stroke-width: 50px
+		opacity: 0
+
+section.animating
+	.circuitlines
+		.line
+			&.line1
+				animation: line1 linear 39s infinite
+			&.line2
+				animation: line2 linear 42s infinite
+			&.line3, &.line16
+				animation: line3 linear 39s infinite
+			&.line4, &.line15
+				animation: line4 linear 45s infinite
+			&.line5
+				animation: line5 linear 39s infinite
+			&.line6
+				animation: line6 linear 33s infinite
+			&.line7, &.line14
+				animation: line7 linear 48s infinite
+			&.line8, &.line13
+				animation: line8 linear 39s infinite
+			&.line9
+				animation: line9 linear 33s infinite
+			&.line10, &.line11
+				animation: line10 linear 45s infinite
+		.circle
+			&.circle1, &.circle2, &.circle3, &.circle4
+				animation: c1 linear 25s infinite
+			&.circle2
+				animation-delay: 8s
+			&.circle3
+				animation-delay: 8s
+			&.circle4
+				animation-delay: 16s
+			&.circle5, &.circle6
+				animation: c1 linear 20s infinite
+			&.circle7
+				animation: c2 linear 18s infinite
+
+
+@keyframes c1
+	10%, 35%
+		opacity: 1
+	0%, 50%, 100%
+		opacity: 0
+@keyframes c2
+	50%, 80%
+		opacity: 1
+	0%, 40%, 95%, 100%
+		opacity: 0.3
+
+@keyframes line1
+	from
+		stroke-dashoffset: 0
+	to
+		stroke-dashoffset: -3495
+@keyframes line2
+	from
+		stroke-dashoffset: 0
+	to
+		stroke-dashoffset: 2925
+@keyframes line3
+	from
+		stroke-dashoffset: 0
+	to
+		stroke-dashoffset: -4890
+@keyframes line4
+	from
+		stroke-dashoffset: 0
+	to
+		stroke-dashoffset: 4749
+@keyframes line5
+	from
+		stroke-dashoffset: 0
+	to
+		stroke-dashoffset: -4167
+@keyframes line6
+	from
+		stroke-dashoffset: 3810
+	to
+		stroke-dashoffset: 0
+@keyframes line7
+	from
+		stroke-dashoffset: 6420
+	to
+		stroke-dashoffset: 0
+@keyframes line8
+	from
+		stroke-dashoffset: 4428
+	to
+		stroke-dashoffset: 0
+@keyframes line9
+	from
+		stroke-dashoffset: -3720
+	to
+		stroke-dashoffset: 0
+@keyframes line10
+	from
+		stroke-dashoffset: 0
+	to
+		stroke-dashoffset: -4194
+// @keyframes line12
+// 	from
+// 		stroke-dashoffset: 800
+// 	to
+// 		stroke-dashoffset: -3500

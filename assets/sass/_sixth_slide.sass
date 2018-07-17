@@ -1,0 +1,64 @@
+.sixth-slide
+	background-color: $purple
+
+	.section-body
+		padding: 250px 0 150px
+
+	.automate-cont
+		padding: 0 0 50px 0
+
+	img
+		max-width: 100%
+		border-radius: 9px
+
+	.secure-cont
+		padding: 2% 0px
+
+	.slideshow
+		width: 500px
+		margin: 150 0
+		float: left
+		overflow: hidden
+		border-radius: 8px
+
+	#market
+		width: 100%
+		margin-left: 0
+		vertical-align: top
+
+	.automate-cont
+		margin-top: 200px
+		ul li
+			color: $white
+			line-height: 50px
+
+	.mobile-frame
+		transform: scale(1)
+		width: 520px
+		height: 750px
+		background-image: url('http://vass.augurstech.com/update/_landing_page/assets/images/mobile-frame.png')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		padding: 40px 37px
+		float: right
+		.video-container
+			overflow: hidden
+			border-radius: 22px
+			transform: scale(1)
+			margin-top: 0
+		.video-wrapper
+			float: left
+
+		video
+			margin-top: -5px
+			width: 100%
+			filter: none
+			border: none
+
+	.sec-title, .automate-cont ul li, .mobile-frame
+		opacity: 0
+
+	&.loaded
+		.sec-title, .automate-cont ul li, .mobile-frame
+			opacity: 1

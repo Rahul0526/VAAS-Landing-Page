@@ -1,0 +1,987 @@
+<!doctype html>
+<html>
+<!-- Mirrored from profile.appsimity.com/cywg-as/html/vaas2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 May 2018 20:59:14 GMT -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>VAAS</title>
+	<link href="http://vass.augurstech.com/update/_landing_page/assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+	<link href="http://vass.augurstech.com/update/_landing_page/assets/css/animate.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://vass.augurstech.com/update/_landing_page/assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://vass.augurstech.com/update/_landing_page/assets/css/jquery.mCustomScrollbar.css" />
+	<link href="assets/fonts/fonts.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/new-style.css" rel="stylesheet" type="text/css">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	<svg class="filter" width="660" height="220">
+		<defs>
+			<linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" class="stop1"/>
+				<stop offset="100%" class="stop2"/>
+			</linearGradient>
+			<linearGradient id="grid_vertical" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" class="stop1"/>
+				<stop offset="20%" class="stop2"/>
+				<stop offset="80%" class="stop3"/>
+				<stop offset="100%" class="stop4"/>
+			</linearGradient>
+			<linearGradient id="left_lines" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" class="stop1"/>
+				<stop offset="33%" class="stop2"/>
+				<stop offset="66%" class="stop3"/>
+				<stop offset="100%" class="stop4"/>
+			</linearGradient>
+			<linearGradient id="right_lines" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" class="stop1"/>
+				<stop offset="33%" class="stop2"/>
+				<stop offset="66%" class="stop3"/>
+				<stop offset="100%" class="stop4"/>
+			</linearGradient>
+			<linearGradient id="spam_lines_left" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" class="stop1"/>
+				<stop offset="80%" class="stop2"/>
+				<stop offset="100%" class="stop3"/>
+			</linearGradient>
+			<linearGradient id="spam_lines_right" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" class="stop1"/>
+				<stop offset="20%" class="stop2"/>
+				<stop offset="100%" class="stop3"/>
+			</linearGradient>
+			<pattern id="logoStroke" patternUnits="userSpaceOnUse" width="600" height="100">
+				<image x="0" y="0" width="600" height="100" xlink:href="assets/images/logo-stroke.jpg" />
+			</pattern>
+		</defs>
+	</svg>
+	<svg class="filter" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+		<defs>
+			<clipPath id="id0">
+				<path d="M144.39 0.61c79.4,0 143.77,35.23 143.77,78.69 0,43.46 -64.37,78.69 -143.77,78.69 -79.4,0 -143.77,-35.23 -143.77,-78.69 0,-43.46 64.37,-78.69 143.77,-78.69z"></path>
+			</clipPath>
+			<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0">
+				<stop class="stop1" offset="0%" />
+				<stop class="stop2" offset="25%" />
+				<stop class="stop3" offset="50%" />
+				<stop class="stop4" offset="75%" />
+				<stop class="stop5" offset="100%" />
+			</linearGradient>
+			<radialGradient id="radialGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" class="stop1" />
+				<stop offset="50%" class="stop2" />
+				<stop offset="100%" class="stop3" />
+			</radialGradient>
+			<!-- Stitch 2 gradients together for seamless animation  -->
+			<pattern id="pattern" x="0" y="0" width="300%" height="100%" patternUnits="userSpaceOnUse">
+				<rect x="0" y="0" width="150%" height="100%" fill="url(#gradient)">
+					<animate attributeType="XML" attributeName="x" from="0" to="150%" dur="7s" repeatCount="indefinite" />
+				</rect>
+				<rect x="-150%" y="0" width="150%" height="100%" fill="url(#gradient)">
+					<animate attributeType="XML" attributeName="x" from="-150%" to="0" dur="7s" repeatCount="indefinite" />
+				</rect>
+			</pattern>
+		</defs>
+		<defs>
+			<filter id="goo">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+				<feBlend in="SourceGraphic" in2="goo" />
+			</filter>
+		</defs>
+		<defs>
+			<filter id="coloredText">
+				<feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="1" seed="20" stitchTiles="stitch" result="turbulence"/>
+				<feMorphology operator="dilate" radius="13" in="turbulence" result="morphology"/>
+				<feColorMatrix type="saturate" values="10" in="morphology" result="colormatrix"/>
+				<feFlood flood-color="#ffffff" flood-opacity="1" result="flood1"/>
+				<feMerge result="merge3">
+					<feMergeNode in="flood1" result="mergeNode7"/>
+					<feMergeNode in="colormatrix" result="mergeNode8"/>
+					<feMergeNode in="colormatrix" result="mergeNode9"/>
+					<feMergeNode in="colormatrix" result="mergeNode10"/>
+				</feMerge>
+				<feComposite in="merge3" in2="SourceGraphic" operator="in" result="composite"/>
+			</filter>
+		</defs>
+		<defs> 
+			<linearGradient id="logoGradient1" x1="0%" y1="50%" x2="100%" y2="50%" > 
+				<stop offset="0%" style="stop-color:rgb(106,216,250);stop-opacity:0.9" />
+				<stop offset="100%" style="stop-color:rgb(39,126,247);stop-opacity:0.7" />
+			</linearGradient>
+			<linearGradient id="logoGradient2" x1="74%" y1="0%" x2="26%" y2="100%" > 
+				<stop offset="0%" style="stop-color:rgb(106,216,250);stop-opacity:1" />
+				<stop offset="51%" style="stop-color:rgb(39,126,247);stop-opacity:0.7" />
+				<stop offset="85%" style="stop-color:rgb(39,126,247);stop-opacity:0.5" />
+			</linearGradient> 
+		</defs>
+	</svg>
+	<style class="dynamic-css"></style>
+</head>
+
+<body class="loading initializing">
+	<div class="pageLoader">
+		<div class="loader">
+			<div class="ring"></div>
+			<span>LEGEND IS LOADING</span>
+		</div>
+	</div>
+	<div class="systemInitialization">
+		<h1 class="box msg1" style="display: none">WELCOME</h1>
+		<div class="box msg3">
+			<div class="vertical-block vb1">
+				<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas.png" alt="VAAS">
+			</div>
+			<div class="vertical-block vb2">
+				<h2 class="msg2">
+					THE&nbsp;MOST&nbsp;ADVANCED
+					<br>
+					LENDING&nbsp;PLATFORM
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="bodyBg" class="bodyBg">
+		<canvas class="circuitlines"></canvas>
+		<canvas id="canvas3d"></canvas>
+	</div>
+
+	<header class="panel haeader-panel animated sticky">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="logo">
+						<a href="#">
+							<!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="131.844px" height="22.18px" viewBox="0 0 131.844 22.18" enable-background="new 0 0 131.844 22.18" xml:space="preserve">
+								<path d="M104.074,8.715h23.737c6.202,2.987,4.975,13.465-3.699,13.465h-20.351v-6.337h16.329v-2.315h-1.097h-7.556 C107.342,13.527,104.86,11.312,104.074,8.715z M131.79,0h-20.474c-4.484,0-6.905,2.629-7.387,5.673h27.86V0z M69.151,22.179h12.552 l9.506-13.161v13.161h11.211V8.715H78.819L69.151,22.179z M102.42,0H85.115l-4.051,5.673h21.355V0z M34.542,22.179h12.552 l9.505-13.161v13.161h11.211V8.715H44.209L34.542,22.179z M67.811,0H50.506l-4.052,5.673h21.356V0z M21.868,13.04l-2.987-4.325 H6.094l9.437,13.465h17.67V8.715H21.868V13.04z M33.201,0H21.868v5.673h11.333V0z M12.85,0H0.054L3.99,5.673h12.796L12.85,0z" />
+							</svg> -->
+							<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a href="#">Features</a>
+								</li>
+								<li class="nav-item">
+									<a href="#">Tour</a>
+								</li>
+								<li class="nav-item">
+									<a href="#">Pricing</a>
+								</li>
+								<li class="nav-item">
+									<a href="#">About</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="col-md-3">
+					<div class="login-signup">
+						<a class="signin btn trackBg" href="#">
+							<span class="bg"></span>
+							<span>Sign In</span>
+						</a>
+						<a class="signup btn trackBg" href="#">
+							<span class="bg"></span>
+							<span>Sign Up</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="ai-chatbox prevent-page-scroll" style="display: none">
+		<div class="ai-thumb">
+			<img src="http://vass.augurstech.com/update/_landing_page/assets/images/ai-logo.svg" alt="">
+		</div>
+		<div class="chat-container">
+			<div class="dummy-msg">Hello! may I help you?</div>
+			<div class="ai-startup">
+				<div class="startup-header">
+					<h2 class="ai-name">SIA</h2>
+					<div class="ai-welcome-msg">
+						Your virtual assistant for VAAS
+					</div>
+					<img src="http://vass.augurstech.com/update/_landing_page/assets/images/ai-logo-full.svg" alt="">
+				</div>
+				<div class="startup-form">
+					<div class="input-wrap">
+						<input type="text" id="clientName" class="name-input" placeholder="Enter your name">
+					</div>
+					<div class="input-wrap">
+						<button id="start" class="start">Start</button>
+					</div>
+					<div class="input-wrap">
+						<button id="skip" class="skip">Skip</button>
+					</div>
+				</div>
+			</div>
+			<div class="chat-wrapper">
+				<div class="chat-header">
+					<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas-no-shadow.png" alt="">
+				</div>
+				<div class="chat-body">
+					<!-- <div class="date-saperator">30 May, 2018</div>
+					<div class="chat-msg ai-msg">Hello! how may I help you<div class="msg_time">11:20 AM</div></div>
+					<div class="chat-msg user-msg">hello<div class="msg_time">11:20 AM</div></div>
+					<div class="chat-msg user-msg hide-time">hello<div class="msg_time">11:20 AM</div></div>
+					<div class="chat-msg user-msg">hello<div class="msg_time">11:20 AM</div></div> -->
+				</div>
+				<div class="chat-footer">
+					<form action="">
+						<div class="msg-wrap">
+							<div class="chatmsg" contenteditable=""></div>
+							<textarea name="" id="chatMsg" ></textarea>
+						</div>
+						<button id="sendMsg" class="sendMsg">
+							<svg version="1.1" viewBox="0 0 244.48 180.72">
+								<polygon class="fil0" points="-0,0 244.48,90.93 -0,180.72 -0,105.72 217.44,91.03 -0,75 "/>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+		<section id="first-slide" class="block first-slide wow panel first-section fixed-section" data-shape="translate({shape:'wave',frames:120,opacity:1,materialId:'0'})">
+			<div class="bgi">
+				<canvas id="canvas3d"></canvas>
+			</div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="slide-content">
+							<div class="main-title">
+								<h1 class="animated bounceInLeft">REVOLUTIONIZING THE MCA INDUSTRY</h1>
+								<span class="sub-title animated bounceInUp">THE MOST ADVANCED LENDING PLATFORM</span>
+							</div>
+							<div class="slide-logo">
+								<div>
+									<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas.png" alt="">
+								</div>
+								<div class="testClippath"></div>
+							</div>
+							<div class="get-started">
+								<div class="input-field">
+									<input type="text" placeholder="Enter your email to get started">
+									<a class="search" href="#"><span class="arrow"></span></a>
+								</div>
+							</div>
+							<div class="video-slide">
+								<div class="intro-slide">
+									<img class="slide slide1" src="http://vass.augurstech.com/update/_landing_page/assets/images/merchantinfo-header.png" />
+									<img class="slide slide2" src="http://vass.augurstech.com/update/_landing_page/assets/images/merchantinfo-gridinfo.png" />
+									<img class="slide slide3" src="http://vass.augurstech.com/update/_landing_page/assets/images/merchantinfo-underwritinglab.png" />
+									<img class="slide slide4" src="http://vass.augurstech.com/update/_landing_page/assets/images/merchantinfo-offers.png" />
+									<img class="slide-bg" src="http://vass.augurstech.com/update/_landing_page/assets/images/merchantinfo-bg.png" />
+								</div>
+								<a class="play" href="#">
+									<span class="play_video"></span>
+									<div class="video-container">
+										<div class="video-wrapper">
+											<div class="controls-strip">											
+												<div class="controls">
+													<!-- <div class="play-button"></div> -->
+													<div class="maximize-video square-icon"><i></i></div>
+												</div>
+											</div>
+											<video preload loop class="pauseOnBlur">
+												<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/website presenter.webm" type="video/webm">
+												Your browser does not support HTML5 video.
+											</video>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section id="second-slide" class="block second-slide panel first-slide fixed-section" data-shape="translate({shape:'brain',frames:80,scale:10,opacity:1,frames:80,materialId:'0',cameraScaleX:0.4,cameraScaleY:0.4,autoRotation:false,easing:Bounce.easeOut})"> -->
+		<section id="second-slide" class="block second-slide panel">
+			<div class="bgi">
+			</div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="slide-content">
+							<div class="second-title">
+								<span class="sub-title">Introducing an innovative collaboration and exchange platform to professional in the lending industry</span>
+							</div>
+							<div class="how-it-work">
+								<div class="boxes box1 odd" data-wow-duration="1s" data-wow-delay="1s">
+									<div class="hand1">
+										<svg version="1.1" viewBox="0 0 677.06 73.35">
+											<polyline class="path" points="0.81,11.09 9.88,1.1 306.46,1.1 391.63,72.25 677.06,72.2 "/>
+										</svg>
+									</div>
+									<div class="hand2">
+										<svg version="1.1" viewBox="0 0 594.82 89.28">
+											<polyline class="path" points="41,0.53 1.22,60.5 27.25,88.32 301.98,88.32 326.87,66.51 594.82,66.42 "/>
+										</svg>
+									</div>
+									<div class="user-thumb">
+										<div class="thumb-wrap">
+											<svg version="1.1" viewBox="0 0 190.64 190.64">
+												<path d="M95.32 5.34c49.69,0 89.98,40.29 89.98,89.98 0,49.69 -40.29,89.98 -89.98,89.98 -49.69,0 -89.98,-40.29 -89.98,-89.98 0,-49.69 40.29,-89.98 89.98,-89.98zm-0.09 33.45c13.28,0 24.05,6.94 24.13,22.8 0.12,22.22 -10.72,41.35 -24,41.35 -13.28,0 -24.62,-19.14 -24.09,-41.35 0.43,-17.84 10.68,-22.8 23.96,-22.8zm-25.52 64.11c6.57,0.06 9.6,12.81 26.19,12.45 16.59,-0.36 17.81,-11.98 24.22,-12.54 11.96,-1.04 26.89,26.17 30.41,40.33l-109.84 1.09c2.97,-11.43 17.97,-41.44 29.03,-41.33z"/>
+											</svg>
+										</div>
+									</div>
+									<div class="user-desc">
+										<div class="user-desc-wrap">
+											<h3>Lenders</h3>
+											<p>Using the powerful Grid Mapping Engine, get instant preliminary underwriting results in an instant. <br/>Reduce underwritting costs, speed up underwritting process and increase efficiency. Dramatically improve communication with Brokers and Merchants using the Grid's comprehensive and fully editable visuals.</p>
+										</div>
+									</div>
+								</div>
+								<div class="boxes box2 even" data-wow-duration="1s" data-wow-delay="1.5s">
+									<div class="hand1">
+										<svg version="1.1" viewBox="0 0 677.06 73.35">
+											<polyline class="path" points="0.81,11.09 9.88,1.1 306.46,1.1 391.63,72.25 677.06,72.2 "/>
+										</svg>
+									</div>
+									<div class="hand2">
+										<svg version="1.1" viewBox="0 0 594.82 89.28">
+											<polyline class="path" points="41,0.53 1.22,60.5 27.25,88.32 301.98,88.32 326.87,66.51 594.82,66.42 "/>
+										</svg>
+									</div>
+									<div class="user-thumb">
+										<div class="thumb-wrap">
+											<svg version="1.1" viewBox="0 0 190.64 190.64">
+												<path d="M95.32 5.34c49.69,0 89.98,40.29 89.98,89.98 0,49.69 -40.29,89.98 -89.98,89.98 -49.69,0 -89.98,-40.29 -89.98,-89.98 0,-49.69 40.29,-89.98 89.98,-89.98zm-0.09 33.45c13.28,0 24.05,6.94 24.13,22.8 0.12,22.22 -10.72,41.35 -24,41.35 -13.28,0 -24.62,-19.14 -24.09,-41.35 0.43,-17.84 10.68,-22.8 23.96,-22.8zm-25.52 64.11c6.57,0.06 9.6,12.81 26.19,12.45 16.59,-0.36 17.81,-11.98 24.22,-12.54 11.96,-1.04 26.89,26.17 30.41,40.33l-109.84 1.09c2.97,-11.43 17.97,-41.44 29.03,-41.33z"/>
+											</svg>
+										</div>
+									</div>								
+									<div class="user-desc">
+										<div class="user-desc-wrap">
+											<h3>Brokers</h3>
+											<p>Get instant preliminary underwriting results through the Grid to better understand your client's financial status and make better decisions as to which Lender is best suited for them. <br> Receive offers faster from Lenders by sharing with them your pre-underwritten clients Grids. With the Backdoor shield active, no matter matter how many Lenders you share your Grids with, you keep your client's data protected at all time</p>
+										</div>
+									</div>
+								</div>
+								<div class="boxes box3 odd" data-wow-duration="1s" data-wow-delay="2s">
+									<div class="hand1">
+										<svg version="1.1" viewBox="0 0 677.06 73.35">
+											<polyline class="path" points="0.81,11.09 9.88,1.1 306.46,1.1 391.63,72.25 677.06,72.2 "/>
+										</svg>
+									</div>
+									<div class="hand2">
+										<svg version="1.1" viewBox="0 0 594.82 89.28">
+											<polyline class="path" points="41,0.53 1.22,60.5 27.25,88.32 301.98,88.32 326.87,66.51 594.82,66.42 "/>
+										</svg>
+									</div>
+									<div class="user-thumb">
+										<div class="thumb-wrap">
+											<svg version="1.1" viewBox="0 0 190.64 190.64">
+												<path d="M95.32 5.34c49.69,0 89.98,40.29 89.98,89.98 0,49.69 -40.29,89.98 -89.98,89.98 -49.69,0 -89.98,-40.29 -89.98,-89.98 0,-49.69 40.29,-89.98 89.98,-89.98zm-0.09 33.45c13.28,0 24.05,6.94 24.13,22.8 0.12,22.22 -10.72,41.35 -24,41.35 -13.28,0 -24.62,-19.14 -24.09,-41.35 0.43,-17.84 10.68,-22.8 23.96,-22.8zm-25.52 64.11c6.57,0.06 9.6,12.81 26.19,12.45 16.59,-0.36 17.81,-11.98 24.22,-12.54 11.96,-1.04 26.89,26.17 30.41,40.33l-109.84 1.09c2.97,-11.43 17.97,-41.44 29.03,-41.33z"/>
+											</svg>
+										</div>
+									</div>	
+									<div class="user-desc">
+										<div class="user-desc-wrap">
+											<h3>Merchants</h3>
+											<p>Using VAAS Grid Mapping visuals shared by broker and Lenders, get a better picture of your business financial status and understanding of how obtaining credit will affect your business in the future. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section id="third-slide" class="block third-slide wow right-light panel"  data-shape="translate({shape:'shield',frames:30,scale:10,opacity:1,frames:80,materialId:'0',cameraX:50,cameraZ:1000,cameraScaleX:0.2,cameraScaleY:0.2,autoRotation:false,easing:Bounce.easeOut})"> -->
+		<section id="third-slide" class="block third-slide right-light panel">
+			<section class="joining-section second-third">
+				<div class="before"></div>
+				<div class="after"></div>
+				<div class="top-flap"></div>
+				<div class="bottom-flap"></div>
+			</section>
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row backdor">
+							<div class="col">
+								<div class="animatedTitle">
+									<div class="subTitle"><span>BACKDOOR SHIELD</span></div>
+									<div class="mainTitle"><span>PROTECTION</span></div>
+								</div>
+								<!-- <img src="http://vass.augurstech.com/update/_landing_page/assets/images/backdoor-shield-protection.png" /> -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="secure-cont">
+									<h3 class="sec-title">Security</h3>
+									<p>Powerful security features, letting you choose the amount of security you need while sharing a grid. Protect your deals to the maximum with 'Backdoor shield' limiting the information one can see on the file shared. Sit back and let the A.I. control activities on your deals.</p>
+								</div>
+							</div>
+							<div class="col-md-7 shield-sec">
+								<div class="backdor-shield">
+									<svg class="shield-border" version="1.1" style="fill-rule:evenodd;" viewBox="0 0 2206.07 742.1">
+										<path d="M1102.97 691.57c-114.21,-55.1 -256.66,-170.66 -240.41,-538.16 76.29,-4.17 159.2,-17.37 240.41,-59.45 81.21,42.08 164.11,55.28 240.41,59.45 16.25,367.48 -126.2,483.05 -240.4,538.16z" />
+									</svg>
+									<svg class="shield-inner" version="1.1" style="fill-rule:evenodd;" viewBox="0 0 1229.59 413.62">
+										<g class="right-lines">
+											<polyline class="line line1" points="1227.64,266.88 832.67,266.88 795.86,227.54 737.68,227.54 "/>
+											<polyline class="line line2" points="1227.64,307.56 839.57,307.56 796.75,261.89 727.28,261.89 "/>
+											<polyline class="line line3" points="1227.64,216.85 1157.61,217.16 1147.62,231.91 831.72,231.91 808.88,206.22 742.16,206.22 "/>
+											<polyline class="line line4" points="1227.64,189.66 1114.79,189.66 1095.76,219.63 855.5,219.63 823.15,187.28 745.11,187.28 "/>
+											<polyline class="line line5" points="1227.64,161.53 1064.83,161.53 1036.29,205.3 884.05,205.3 840.28,161.53 747.79,161.53 "/>
+											<polyline class="line line6" points="1227.64,133.6 877.14,134.39 865.14,146.39 748.75,146.39 "/>
+											<polyline class="line line7" points="1227.64,80.44 895.22,81.14 841.35,134.06 749.21,134.06 "/>
+										</g>
+										<g class="left-lines">
+											<polyline class="line line1" points="1.86,301.85 390.93,301.85 430.89,261.89 502.23,261.89 "/>
+											<polyline class="line line2" points="1.86,276.27 359.29,276.27 408.6,227.54 491.83,227.54 "/>
+											<polyline class="line line3" points="1.86,198.61 216.45,198.61 222.27,206.22 487.36,206.22 "/>
+											<polyline class="line line4" points="1.86,176.34 263.19,176.34 271.75,187.28 484.4,187.28 "/>
+											<polyline class="line line5" points="1.86,149.16 307.91,149.16 321.71,161.53 481.72,161.53 "/>
+											<polyline class="line line6" points="1.86,133.55 352.04,133.55 365.84,146.39 480.76,146.39 "/>
+											<polyline class="line line7" points="1.86,121.21 402,121.21 415.79,134.06 480.3,134.06 "/>
+										</g>
+										<path class="shield" d="M510.97 83.25l0 199.22m173.11 53.15l-138.12 0m-22.08 -28.65l181.48 0m13.37 -25.39l-207.76 0m-10.7 -25.38l229.14 0m7.82 -26.47l-244.78 0m-5.24 -26.47l255.57 0m3.57 -25.38l-263.02 0m-2.16 -25.39l267.34 0m0.57 -26.47l-268.88 0m0.15 -26.47l268.97 0m-108.94 272.32l0 -307.82m26.11 9.6l0 278.77m26.11 -27.27l0 -245.11m26.11 3.26l0 198.77m-103.81 -229.7l0 333.09m-25.61 -13.64l0 -307.82m-26.11 9.6l0 278.68m-26.11 -27.25l0 -245.05"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <section class="joining-section third-fourth"></section> -->
+		</section>
+		
+		<!-- <section id="forth-slide" class="block forth-slide left-light panel" data-shape="translate({shape:'wave',frames:80,materialId:'0'})"> -->
+		<section id="forth-slide" class="block fourth-slide forth-slide left-light panel">
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 automate-cont">
+								<h3 class="sec-title">Automated underwriting</h3>
+								<span>VAAS has the most powerful OCR technology</span>
+								<ul>
+									<li>Click and drag original or scanned PDF files</li>
+									<li>Reads, analyzes bank stmts at blazing speed</li>
+									<li>Generate underwriting grids</li>
+									<li>Vaas A.I delivers underwriting woks within seconds</li>
+								</ul>
+							</div>
+							<div class="col-md-7 atomate-img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="video-container zoomed">
+				<div class="video-wrapper">
+					<!-- <div class="controls-strip">
+						<div class="controls">
+							<div class="maximize-video square-icon"><i></i></div>
+						</div>
+					</div> -->
+					<video preload loop>
+						<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/automated.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					</video>
+				</div>
+			</div>
+			<!-- <section class="joining-section fourth-fifth"></section> -->
+		</section>
+		
+		<!-- <section id="fifth-slide" class="block fifth-slide wow fadeIn right-light panel" data-shape="translate({shape:'cube',frames:50,opacity:1,verticalMovement:true})" data-wow-duration="1s" data-wow-delay="0s"> -->
+		<section id="fifth-slide" class="block fifth-slide right-light panel">
+			<div class="bgi">
+				<svg version="1.1" viewBox="0 0 11010.91 8435.87" preserveAspectRatio="none">
+					<g>
+						<path class="whiteBg" d="M11007.43 8432.39l-0.45 0.01c-3666.15,0 -7332.29,0 -10998.44,0l0 -0.01 10998.89 0z"/>
+						<path class="bg1" d="M11007.43 8432.39l-0.45 0.01c-3666.15,0 -7332.29,0 -10998.44,0l0 -0.01 10998.89 0z"/>
+						<path class="bg1Final" d="M11007.43 3.47l-0.45 8428.93c-3666.15,0 -7332.29,0 -10998.44,0l0 -8428.92 10998.89 -0.01z"/>
+					</g>
+					<g>
+						<path class="bg2" d="M11007.43 3.47l-0.45 443.15c-525.55,0.06 -524.39,416.47 -1023.18,415.93 -498.8,-0.53 -499.65,-416.34 -999.25,-416.44 -457.59,-0.09 -501.59,416.66 -1000.25,416.66 -498.67,0 -499.87,-416.66 -999.55,-416.66 -499.67,0 -502.16,417.18 -999.87,416.66 -497.71,-0.52 -498.19,-416.66 -1000.18,-416.66 -501.99,0 -497.27,415.61 -999.41,416.66 -502.13,1.04 -499.2,-417.18 -1000.13,-416.66 -500.93,0.52 -498.94,416.02 -999.91,416.55 -500.97,0.53 -496.82,-417.85 -998.32,-417.07 -501.52,0.79 -499.69,417.64 -978.38,412.6l0 -854.71 10998.89 -0.01z"/>
+						<path class="bg2Final" d="M11007.43 3.48l-0.45 7494.68c-550.11,-96.6 -674.28,785.45 -1006.82,791.14 -420.04,7.19 -403.45,-425.71 -1002.4,-457.54 -327.51,-17.4 -491.51,540.6 -985.2,536.94 -417.23,-3.09 -749.63,-196.63 -1012.35,-237.58 -439.06,-68.45 -688.16,144.36 -977.36,128.81 -406.82,-21.89 -724.75,-569.96 -997.47,-590.51 -595.53,-44.88 -350.01,570.63 -1019.46,651.77 -507.64,61.53 -542.7,-2129.22 -1011.9,-2178.61 -710.56,-74.79 -348.45,1750.68 -994.84,1880.11 -740.3,148.24 -348.62,-623.47 -981.95,-883.95 -609.64,-250.74 -1045.35,851.18 -1012.01,-354.09l0 -6781.16 11002.2 -0.01z"/>
+					</g>
+				</svg>
+				<!-- <div class="gooye-bg">
+					<div class="topStrip"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+					<div class="ball"></div>
+				</div> -->
+				<svg version="1.1" viewBox="0 0 11010.91 8435.87" preserveAspectRatio="none">
+					<g>
+						<path class="bg3" d="M11007.43 3.48l-0.45 0 -589.9 0 -799.27 0 -1216.9 0 -1049.54 0 -1602 0c-268.5,0 -537.01,0 -805.52,0 -528.59,0 -1057.18,0 -1585.77,0l-76.74 0 -1429.44 0 -1148.3 0 -695.07 0 0 0 10998.89 0z"/>
+						<path class="bg3Final" d="M11007.43 3.47l-0.45 443.28c-525.71,0.06 -524.55,783.33 -1023.49,782.8 -498.94,-0.53 -499.81,-449.81 -999.55,-449.9 -457.72,-0.08 -451.73,-283.35 -950.54,-283.35 -498.82,0 -533.36,533.4 -1033.19,533.4 -499.82,0 -502.32,-516.22 -1000.18,-516.73 -497.85,-0.51 -515.01,233.34 -1017.16,233.34 -502.14,0 -665.79,-311.94 -973.89,84.74 -343.92,442.78 -450.13,-501.67 -1017.91,-509.82 -327,-4.69 -482.42,691.2 -983.55,691.73 -501.12,0.52 -521.21,-616.39 -1023.63,-567.23 -284.62,27.85 -499.84,417.76 -978.67,412.72l0 -854.97 11002.2 -0.01z"/>
+					</g>
+				</svg>
+			</div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="sec-title comm-title">Improved Communication</h3>
+							</div>
+							<div class="col-md-5 automate-cont grid-bg">
+								<ul>
+									<li>Quickly share Merchant Grids $ data</li>
+									<li>Seamless interaction with your peers</li>
+									<li>Never let files get loat through emails</li>
+									<li>Intergrated notification system</li>
+									<li>Gmail Integration</li>
+									<li>Intergrated chat system</li>
+									<li>Proprietary E-signature</li>
+									<li>Discuss, Comments, Snipping & Edit tools</li>
+								</ul>
+							</div>
+							<div class="col-md-7 atomate-img"></div>
+						</div>
+					</div>
+					<div class="video-container zoomable">
+						<div class="video-wrapper">
+							<div class="controls-strip">							
+								<div class="controls">
+									<div class="maximize-video square-icon"><i></i></div>
+								</div>
+							</div>
+							<video preload loop>
+								<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/Improved Communication.webm" type="video/webm">
+								Your browser does not support HTML5 video.
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="joining-section fifth-sixth">
+				<div class="before"></div>
+				<div class="after"></div>
+			</section>
+		</section>
+		
+		<!-- <section id="sixth-slide" class="block sixth-slide grid-market wow fadeIn left-light panel" data-shape="translate({shape:'skull',frames:30,scale:6,opacity:1,frames:80,materialId:'0',cameraX:50,cameraZ:1415,cameraScaleX:0.3,cameraScaleY:0.3,autoRotation:false,easing:Bounce.easeOut})" data-wow-duration="1s" data-wow-delay="0s"> -->
+		<section id="sixth-slide" class="block sixth-slide grid-market left-light panel">
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 text-center">
+								<div class="mobile-frame">
+									<div class="video-container">
+										<div class="video-wrapper">
+											<div class="controls-strip">											
+												<div class="controls">
+													<div class="maximize-video square-icon"><i></i></div>
+												</div>
+											</div>
+											<video preload loop>
+												<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/markets-new.mp4" type="video/mp4">
+												Your browser does not support HTML5 video.
+											</video>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 automate-cont">
+								<h3 class="sec-title">Grid Market</h3>
+								<ul>
+									<li>Post loan applicatins into the Grid Market</li>
+									<li>Receive multiple Funding offers Lenders</li>
+									<li>No risk of getting your client stolen</li>
+									<li>Pick best offers for your clients</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="joining-section sixth-seventh">
+				<div class="before"></div>
+				<div class="after"></div>
+			</section>
+		</section>
+		
+		<!-- <section id="seventh-slide" class="block seventh-slide grid-market wow fadeIn left-light panel" data-shape="translate({shape:'random',frames:40,materialId:'0',verticalMovement:true,blinkable:true})" data-wow-duration="1s" data-wow-delay="0s"> -->
+		<section id="seventh-slide" class="block seventh-slide grid-market left-light panel">
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 secure-cont middle-content">
+								<div>
+									<h3 class="sec-title">Smart Filing Technology</h3>
+									<ul>
+										<li>File Management problems solved.</li>
+										<li>Upload your loan docs and let the A.I</li>
+										<li>Detect document type</li>
+										<li>Re-label each doc according to a pre-defined rules</li>
+										<li>Save docs into the correct folder it belongs</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-7 text-center">
+								<div class="video-container zoomable">
+									<div class="video-wrapper bottom-shade left-bent">
+										<div class="controls-strip">										
+											<div class="controls">
+												<div class="maximize-video square-icon"><i></i></div>
+											</div>
+										</div>
+										<video preload loop poster="assets/images/smartFilling.png">
+											<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/smart_filing.webm" type="video/webm">
+											Your browser does not support HTML5 video.
+										</video>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section id="eighth-slide" class="block eighth-slide wow fadeIn right-light panel" data-shape="translate({shape:'usb',frames:30,scale:6,opacity:1,frames:80,materialId:'0',cameraScaleX:0.3,cameraScaleY:0.3,autoRotation:false})" data-wow-duration="1s" data-wow-delay="0s"> -->
+		<section id="eighth-slide" class="block eighth-slide right-light panel" data-wow-duration="1s" data-wow-delay="0s">
+			<section class="joining-section seventh-eighth">
+				<div class="before"></div>
+				<div class="after"></div>
+			</section>
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="description">
+						<div class="secure-cont">
+							<h3 class="sec-title">Automated <br> Data Entry</h3>
+							<ul>
+								<li>Click & Drag your loan apps into VAAS</li>
+								<li>Within seconds, VAAS OCR technology detects, analyzes documents and automatically fill our the forms fields for your.</li>
+								<li>Whether your docs are the downloaded originals or scanned, our powerful technology will copmplete the job with extreme accuracy.</li>
+								<li>Our OCR technology will read hand-written loan applications with 90% to 98% accuracy</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="video-container">
+					<div class="video-wrapper right-bent">
+						<div class="controls-strip">						
+							<div class="controls">
+								<div class="maximize-video square-icon"><i></i></div>
+							</div>
+						</div>
+						<video preload loop>
+							<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/filing-mgmt.mp4" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+					</div>
+				</div>
+			</div>
+			<section class="joining-section eighth-ninth">
+				<div class="before"></div>
+				<div class="after"></div>
+			</section>
+		</section>
+
+		<section id="ninth-slide" class="block ninth-slide left-light panel">
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 automate-cont">
+								<div class="wrap">
+									<h3 class="sec-title">Grid Sharing</h3>
+									<span>Share your with network of lenders, investors, brokers merchants and other collaborators.</span>
+									<ul>
+										<li>Loan apps</li>
+										<li>Client files</li>
+										<li>Docs</li>
+										<li>Comments</li>
+										<li>Underwriting Grids</li>
+										<li>Offers</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="video-container zoomable">
+									<div class="video-wrapper left-bent left-origin">
+										<div class="controls-strip">										
+											<div class="controls">
+												<div class="maximize-video square-icon"><i></i></div>
+											</div>
+										</div>
+										<video preload loop>
+											<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/grid_sharing.webm" type="video/webm">
+											Your browser does not support HTML5 video.
+										</video>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- <section id="tenth-slide" class="block tenth-slide wow fadeIn right-light panel" data-shape="translate({shape:'paintBrush',frames:30,scale:6,opacity:1,frames:80,materialId:'0',cameraScaleX:0.3,cameraScaleY:0.3,autoRotation:false,easing:Bounce.easeOut})" data-wow-duration="1s" data-wow-delay="0s" data-shape="translate({shape:'wave',frames:50,materialId:'0'})"> -->
+		<!-- <section id="tenth-slide" class="block tenth-slide wow fadeIn right-light panel" data-wow-duration="1s" data-wow-delay="0s">
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 automate-cont">
+								<h3 class="sec-title">Introducing a innovative color coding system format and standard the lending industry</h3>
+								<p>Reduce ineficiencies, improve user experience and responsiveness through an organized and unified patented color coding system makes it easy for users to quickly identify what section of the offers they receives pertains to.</p>
+								<p>You will never get lost again when looking at your offers and proposals from others.</p>
+								<p>One common format. One standard with color rules to unify an entire industry once and for all</p>
+							</div>
+							<div class="col-md-12 text-center inovate-img wow animated slideInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+								<div class="blinking">
+									<img class="blink" src="assets/images/offers.jpg" />
+									<p></p>
+									<img class="" src="assets/images/funding.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<section id="eleventh-slide" class="block eleventh-slide wow fadeIn left-light panel last-section" data-wow-duration="1s" data-wow-delay="0s">
+			<section class="joining-section ninth-tenth">
+				<div class="before"></div>
+				<div class="after"></div>
+			</section>
+			<div class="bgi"></div>
+			<div class="content-wrapper">
+				<div class="section-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 automate-cont">
+								<h3 class="sec-title text-center">Integrations</h3>
+							</div>
+						</div>
+					</div>
+					<div class="api-container">
+						<ul>
+							<div class="brand-logo logo">
+								<div class="logo-img"></div>
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="131.844px" height="22.18px" viewBox="0 0 131.844 22.18" enable-background="new 0 0 131.844 22.18" xml:space="preserve">
+									<g>
+										<path d="M104.074,8.715h23.737c6.202,2.987,4.975,13.465-3.699,13.465h-20.351v-6.337h16.329v-2.315h-1.097h-7.556 C107.342,13.527,104.86,11.312,104.074,8.715z M131.79,0h-20.474c-4.484,0-6.905,2.629-7.387,5.673h27.86V0z M69.151,22.179h12.552 l9.506-13.161v13.161h11.211V8.715H78.819L69.151,22.179z M102.42,0H85.115l-4.051,5.673h21.355V0z M34.542,22.179h12.552 l9.505-13.161v13.161h11.211V8.715H44.209L34.542,22.179z M67.811,0H50.506l-4.052,5.673h21.356V0z M21.868,13.04l-2.987-4.325 H6.094l9.437,13.465h17.67V8.715H21.868V13.04z M33.201,0H21.868v5.673h11.333V0z M12.85,0H0.054L3.99,5.673h12.796L12.85,0z" />
+									</g>
+								</svg>
+							</div>
+							<li class="step1"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo1.png" /></li>
+							<li class="step1"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo2.png" /></li>
+							<li class="step1"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo3.png" /></li>
+							<li class="step2"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo4.png" /></li>
+							<li class="step2"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo5.png" /></li>
+							<li class="step2">
+								<img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo6.png" />
+								<div class="video-container">
+									<div class="video-wrapper">
+										<div class="play-button maximize-video autohide"></div>
+										<video preload loop class="pauseOnBlur">
+											<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/google_review.webm" type="video/webm">
+											Your browser does not support HTML5 video.
+										</video>
+									</div>
+								</div>
+							</li>
+							<li class="step2"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo7.png" /></li>
+							<li class="step3">
+								<img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo8.png" />
+								<div class="video-container">
+									<div class="video-wrapper">
+										<div class="play-button maximize-video autohide"></div>
+										<video preload loop class="pauseOnBlur">
+											<source src="http://vass.augurstech.com/update/_landing_page/assets/videos/yelp.webm" type="video/webm">
+											Your browser does not support HTML5 video.
+										</video>
+									</div>
+								</div>
+							</li>
+							<li class="step3"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo9.png" /></li>
+							<li class="step4"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo10.png" /></li>
+							<li class="step4"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo11.png" /></li>
+							<li class="step4"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo12.png" /></li>
+							<li class="step4"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo13.png" /></li>
+							<li class="step5"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo14.png" /></li>
+							<li class="step5"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo15.png" /></li>
+							<li class="step5"><img src="http://vass.augurstech.com/update/_landing_page/assets/images/brand-logos/logo15.png" /></li>
+						</ul>					
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer id="footer">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+					 
+					 <div class="col-md-1 footer-links ">
+						
+					</div>
+
+					<div class="col-md-2 footer-links ">
+						<ul>
+							<h3>Features</h3>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 footer-links">
+						<ul>
+							<h3>Features</h3>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 footer-links">
+						<ul>
+							<h3>Features</h3>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 footer-links">
+						<ul>
+							<h3>Features</h3>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">Feature</a></li>
+						</ul>
+					</div>
+
+
+					<div class="col-md-2 footer-links">
+						<div class="login-singup">
+						<a class="signin btn trackBg" href="#">
+							<span class="bg"></span>
+							<span>Sign In</span>
+						</a>
+						<a class="signup btn trackBg" href="#">
+							<span class="bg"></span>
+							<span>Sign Up</span>
+						</a>
+					</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-md-12 text-center">
+				<div class="logo footer-logo slide-logo">
+					<a href="#">
+						<!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="131.844px" height="22.18px" viewBox="0 0 131.844 22.18" enable-background="new 0 0 131.844 22.18" xml:space="preserve">
+							<path d="M104.074,8.715h23.737c6.202,2.987,4.975,13.465-3.699,13.465h-20.351v-6.337h16.329v-2.315h-1.097h-7.556 C107.342,13.527,104.86,11.312,104.074,8.715z M131.79,0h-20.474c-4.484,0-6.905,2.629-7.387,5.673h27.86V0z M69.151,22.179h12.552 l9.506-13.161v13.161h11.211V8.715H78.819L69.151,22.179z M102.42,0H85.115l-4.051,5.673h21.355V0z M34.542,22.179h12.552 l9.505-13.161v13.161h11.211V8.715H44.209L34.542,22.179z M67.811,0H50.506l-4.052,5.673h21.356V0z M21.868,13.04l-2.987-4.325 H6.094l9.437,13.465h17.67V8.715H21.868V13.04z M33.201,0H21.868v5.673h11.333V0z M12.85,0H0.054L3.99,5.673h12.796L12.85,0z" />
+						</svg> -->
+						<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="popup-player" style="display: none">
+		<span class="close-popup">
+			<span class="close-btn"></span>
+		</span>
+		<div class="video-container"></div>
+	</div>
+
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/jquery-2.2.1.min.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/jquery-ui.min.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/bootstrap.min.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/jquery.mousewheel.min.js"></script>
+
+	<!-- <script src="_assets/js/wow.min.js"></script> -->
+	<!-- <script src="http://vass.augurstech.com/update/_landing_page/assets/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/three.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/Projector.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/GeometryUtils.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/CanvasRenderer.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/TweenMax.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/TimelineMax.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/MorphSVGPlugin.min.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/SplitText.min.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/CustomEase.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/OBJLoader.js"></script>
+	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/OrbitControls.js"></script>
+
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/threeAnimations.js"></script>
+
+</body>
+
+</html>

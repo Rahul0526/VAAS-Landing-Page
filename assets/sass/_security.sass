@@ -1,0 +1,109 @@
+#radialGradient
+	.stop1
+		stop-color: transparentize($blue_color, 0)
+	.stop2
+		stop-color: transparentize($blue_color, 0.5)
+	.stop3
+		stop-color: transparentize($blue_color, 1)
+	.stop4
+		stop-color: transparentize($blue_color, 1)
+#left_lines
+	.stop1
+		stop-color: transparent
+	.stop2
+		stop-color: $purple
+	.stop3, .stop4
+		stop-color: $blue_color
+#right_lines
+	.stop1, .stop2
+		stop-color: $blue_color
+	.stop3
+		stop-color: $purple
+	.stop4
+		stop-color: transparent
+#spam_lines_right
+	.stop1, .stop2
+		stop-color: red
+	.stop3
+		stop-color: transparent
+#spam_lines_left
+	.stop2, .stop3
+		stop-color: red
+	.stop1
+		stop-color: transparent
+
+.backdor-shield
+	width: 100%
+	top: 50%
+	transform: translateY(-50%)
+	perspective: 1700px
+	transform-style: preserve-3d
+	position: relative
+	width: 120%
+	left: -10%
+	
+	.shield-border
+		stroke-width: 20px
+		
+	.shield-inner
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		transition: all linear 0.5s 0.5s
+		stroke: 1px
+		.shield
+			stroke: url(#radialGradient)
+			stroke-width: 3px
+	svg
+		fill: transparent
+		stroke-width: 2px
+		stroke: $blue_color
+		perspective: 700px
+		transform-style: preserve-3d
+		.left-lines .line
+			stroke: url(#left_lines)
+		.right-lines .line
+			stroke: url(#right_lines)
+		.line
+			filter: drop-shadow(0 0 5px $a)
+			&.line1
+				stroke-dasharray: 150 100 250 150
+				stroke-dashoffset: 0
+				animation-duration: 6.3s
+			&.line2
+				stroke-dasharray: 200 150 70 100
+				stroke-dashoffset: 0
+				animation-duration: 3s
+			&.line3
+				stroke-dasharray: 210 100 50 150
+				stroke-dashoffset: 0
+				animation-duration: 3.5s
+			&.line4
+				stroke-dasharray: 200 150 100 100
+				stroke-dashoffset: 0
+				animation-duration: 2.5s
+			&.line5
+				stroke-dasharray: 200 100 150 150
+				stroke-dashoffset: 0
+				animation-duration: 3s
+			&.line6
+				stroke-dasharray: 300 150 100 100
+				stroke-dashoffset: 0
+				animation-duration: 3s
+			&.line7
+				stroke-dasharray: 250 100 100 150
+				stroke-dashoffset: 0
+				animation-duration: 3.3s
+		
+// .backdor-shield
+// 	.shield-border
+// 		stroke-width: 20px
+// 		stroke-dashoffset: 0px
+// 		transition: stroke-dashoffset linear 0.6s 1s
+// 		animation: shieldGlow linear 2s infinite 1.7s, beats linear 2s infinite 3s
+// 	.shield
+// 		.shield-inner
+// 			animation: beats linear 2s infinite 3s
+// 			transition-delay: 2s

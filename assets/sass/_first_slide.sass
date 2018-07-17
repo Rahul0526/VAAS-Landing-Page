@@ -1,0 +1,144 @@
+section.block.first-slide
+	min-height: calc(100vh + 50px)
+	// background-color: transparentize($bodyBg, 0.5)
+	.bgi
+		background: linear-gradient(transparent 40%, $black 70%)
+		// opacity: 0.5
+		canvas
+			opacity: 0.8
+			// position: fixed
+			// top: 0
+			// left: 0
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 100px
+			background: linear-gradient(transparent, $black)
+	.content-wrapper
+		// background: url(../images/grid.png) center bottom no-repeat
+		/*padding-bottom: 100px*/
+		position: relative
+		width: 100%
+		display: table
+		&:after
+			background: url(../images/bottom-left-light.png)
+			position: absolute
+			content: ""
+			width: 364px
+			height: 262px
+			left: 0
+			bottom: -134px
+
+	.main-title
+		margin-top: 100px
+	
+	.slide-logo
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-content: center
+
+	.video-slide 
+		position: relative
+		a.play
+			position: absolute
+			border-radius: 100%
+			width: 114px
+			height: 114px
+			margin: auto
+			margin-left: -57px
+			border: #7cb8f7 solid 2px
+			background: transparentize($light_blue, 0.2)
+			z-index: 2
+			cursor: pointer
+			// transition: all 0.3s ease-in-out
+			&:before
+				content: ''
+				position: absolute
+				border-style: solid
+				border-width: 17px 0 17px 30px
+				border-color: transparent $black
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+				// opacity: 0.5
+				margin-left: 2px
+			.play_video
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				border-radius: 100%
+				cursor: pointer
+			.video-container
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 0px
+				height: 0px
+				margin: 0px
+				overflow: hidden
+				transform: none
+				.video-wrapper
+					float: left
+
+
+.slide-content
+	color: #fff
+	text-align: center
+	margin-top: 0
+
+.main-title
+	color: #fff
+	h1
+		font-weight: 300
+		text-transform: uppercase
+		font-size: 47px
+		position: relative
+
+span.sub-title
+	font-size: 28px
+	text-transform: uppercase
+	color: #808080
+	position: relative
+	display: inline-block
+
+.input-field 
+	display: inline-block
+	position: relative
+	a
+		position: absolute
+		right: 11px
+		top: 50%
+		transform: translatey(-50%)
+		padding: 16px 0
+		width: 50px
+	input
+		border: 2px solid #7091c6
+		padding: 13px
+		// width: 630px
+		font-size: 22px
+		background: #425c7f
+		color: #fff
+		&:placeholder
+			color: #FFF
+			font-size: 28px
+			font-weight: 300
+
+.bot-cont
+	padding-top: 40px
+	p
+		line-height: 12px
+		color: #6eb8e7
+
+// @keyframes boxshadow
+// 	0%
+// 		box-shadow: 0 0 0 0 rgba(118, 114, 253, 0.4)
+// 	50%
+// 		box-shadow: 0 0 0 50px rgba(118, 114, 253, 0)
+// 	100%
+// 		box-shadow: 0 0 0 0 rgba(118, 114, 253, 0)

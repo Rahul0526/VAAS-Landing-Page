@@ -1,0 +1,79 @@
+section.joining-section
+	display: inline-block
+	float: left
+	position: relative
+	height: 350px
+	width: 100%
+	overflow: hidden
+	z-index: 1
+	pointer-events: none
+	.before, .after
+		display: inline-block
+		position: absolute
+		width: 100%
+		height: 100%
+		transform: skewY(-10deg)
+	.before
+		transform-origin: top left
+	.after
+		transform-origin: top right
+
+
+	&.second-third
+		filter: drop-shadow(-30px 0 50px transparentize($purple, 0.5))
+		.before
+			transform: 
+			background-color: #04050A
+
+	&.third-fourth
+		filter: drop-shadow(-30px 0 80px transparentize($blue_color, 0.5))
+		.after
+			background-color: #04050A
+			
+			// background: url(../../_assets/images/grid-market-bg.jpg)
+			// background-size: cover
+			// background-position: center
+			// background-attachment: fixed
+
+	&.fourth-fifth
+		.after
+			background-color: $white
+
+	&.fifth-sixth
+		z-index: 2
+		position: absolute
+		bottom: 0
+		left: 0
+		.after
+			background-color: $purple
+
+	&.sixth-seventh
+		.after
+			background-color: $white
+
+	&.seventh-eighth
+		height: 500px
+		background-color: $white
+		margin-bottom: -200px
+
+		.before, .after
+			top: 0
+			// transform-origin: top center
+			background-color: $bodyBg
+		.before
+			transform: skewY(10deg)
+			box-shadow: 0 -5px 0 $white
+			z-index: 2
+		.after
+			transform: skewY(-10deg)
+			background-color: $purple
+
+	&.eighth-ninth
+		.after
+			background-color: $purple
+
+	&.ninth-tenth
+		height: 350px
+		.after
+			transform: skewY(10deg)
+			background-color: $purple

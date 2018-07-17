@@ -1,0 +1,98 @@
+footer
+	display: block
+	float: left
+	position: fixed
+	left: 0
+	bottom: 0
+	width: 100%
+	background-color: transparent
+
+	z-index: 0
+	// opacity: 0
+	// pointer-events: none
+	.footer-logo
+		display: table
+		float: none
+		margin: 30px auto 0
+		position: relative
+		padding-top: 29px
+		display: inline-block
+		svg
+			width: 250px
+			fill: $black
+			height: 100px
+			filter: drop-shadow(-1px -0.7px 0px currentColor) drop-shadow(-2px -1.4px 0px currentColor) drop-shadow(-3px -2.1px 0px currentColor) drop-shadow(0 0px 10px currentColor)
+			animation: changeColor linear 20s infinite
+
+	.footer-links 
+		h3
+			font-size: 24px
+			font-weight: 400
+		ul 
+			li
+				list-style: none
+				list-style-type: disclosure-closed
+				color: $textColorLight
+				margin-left: 18px
+				a
+					color: #887
+					&:hover
+						color: #4181ff
+						text-decoration: none
+
+	.slide-logo img
+		height: 150px
+
+	a.signup.footer_btn
+		display: inline-block
+		text-align: center
+		margin: 0 0 0 40px
+		color: $white
+		text-transform: uppercase
+		font-weight: 700
+		font-size: 20px
+
+	a.signin.footer_btn
+		font-weight: 300
+		text-transform: uppercase
+		color: $white
+		display: inline-block
+		text-align: center
+		font-size: 20px
+
+	.login-signup
+		top: 0
+		z-index: 1
+
+	.footer-content
+		position: relative
+		z-index: 10
+		position: relative
+		padding: 0
+		display: inline-block
+		width: 100%
+		&:before
+			background: url(../images/header-right-light.png)
+			position: absolute
+			content: ""
+			width: 364px
+			height: 262px
+			right: 0
+			top: 0
+		&:after
+			background: url(../images/bottom-left-light.png)
+			position: absolute
+			content: ""
+			width: 364px
+			height: 262px
+			left: 0
+			bottom: -134px
+
+		.container
+			margin-top: 50px
+
+section.animating
+	footer
+		.footer-logo
+			svg
+				animation: changeColor linear 20s infinite

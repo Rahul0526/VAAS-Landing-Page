@@ -1,0 +1,54 @@
+.ninth-slide
+	z-index: 2 !important
+	.bgi
+		background-color: $purple
+	.automate-cont 
+		perspective: 500px
+		.wrap
+			transform-origin: center
+			transform: rotateY(10deg)
+		span
+			font-size: 26px
+			padding: 25px 0
+			display: block
+			line-height: 33px
+			font-weight: 300
+		ul 
+			display: inline-block
+			li
+				color: $white
+				font-weight: 300
+				list-style-type: circle
+				line-height: 48px
+				list-style-position: inside
+				float: left
+				width: 100%
+	
+	.section-body
+		padding: 100px 0
+
+	.secure-cont
+		padding-top: 0
+
+	.slideInRight img
+		border-radius: 8px
+
+	.video-container
+		transform-origin: left center
+		transform: scale(0.75, 0.8)
+		margin-top: 0
+		perspective: 500px
+		.video-wrapper, video
+			width: 100%
+			box-shadow: none
+			border: none
+		.video-wrapper
+			// box-shadow: 0 0 0 6px $white
+			border-radius: 10px
+
+	.sec-title, .automate-cont span, .automate-cont ul li, .video-container
+		opacity: 0
+
+	&.loaded
+		.sec-title, .automate-cont span, .automate-cont ul li, .video-container
+			opacity: 1

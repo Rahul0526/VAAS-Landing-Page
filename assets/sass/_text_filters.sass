@@ -1,0 +1,21 @@
+.text-batch
+	display: inline-block
+	float: left
+	width: 100%
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		width: calc(100% + 100px)
+		height: calc(100% + 100px)
+		top: -50px
+		left: -50px
+		z-index: 0
+		background-color: transparentize($bodyBg, 0.5)
+		filter: blur(50px)
+	& > *
+		position: relative
+		z-index: 2
+	&.darker
+		&:before
+			background-color: transparentize($bodyBg, 0.3)

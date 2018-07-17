@@ -1,0 +1,201 @@
+#glowgradient
+	.stop1, .stop3, .stop4
+		stop-color: $blue_color
+	.stop2
+		stop-color: $white
+
+.second-slide
+	.bgi
+		background: linear-gradient($black, transparent 40%)
+		background-color: #04050A
+		overflow: hidden
+		canvas
+			position: fixed
+			top: 0
+			left: 0
+			opacity: 0.5
+	.content-wrapper
+		padding: 0
+			// background: url(../images/bg-lines.png) no-repeat center -77px, url(../images/lines-bg-3droad.png) no-repeat center bottom fixed
+			// background: url(../images/lines-bg-3droad.png) no-repeat center bottom fixed
+			// background-size: contain
+			// background-position: bottom center
+
+	.second-title
+		padding: 0 20%
+		h2
+			font-size: 55px
+		.sub-title
+			text-transform: inherit
+			font-size: 34px
+			color: #fff
+			margin-top: 100px
+
+	.how-it-work
+		display: inline-block
+		/* padding: 0 13% */
+		width: 100%
+		max-width: 1300px
+		margin: 0 auto
+
+		p
+			font-size: 18px
+			letter-spacing: 1px
+			font-weight: 100
+			text-align: justify
+		h3
+			font-size: 39px
+			margin-bottom: 15px
+			font-weight: 100
+
+	.boxes 
+		flex: 1
+		position: relative
+		display: inline-block
+		float: left
+		width: 100%
+		padding: 30px 0 30px 30px
+		text-align: left
+		max-width: 1070px
+		margin-top: 80px
+
+		.user-thumb
+			float: left
+			width: 200px
+			.thumb-wrap
+				display: inline-block
+				float: left
+				left: -10px
+				top: -7px
+				position: relative
+			svg
+				width: 160px
+				fill: transparent
+				stroke-width: 3px
+				stroke: $blue_color
+				fill-rule: evenodd
+				transition: none
+				float: left
+				filter: drop-shadow(0 0 15px transparentize($blue_color, 0))
+				transition: transform cubic-bezier(.47,.6,.47,1.95) 0.3s, filter linear 0.1s
+				transform-origin: center
+			&:hover
+				svg
+					transform: scale(1.2)
+					filter: drop-shadow(0 0 15px transparentize($blue_color, 0.8))
+		.user-desc
+			float: left
+			width: calc(100% - 200px)
+			height: 200px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-content: center
+			.user-desc-wrap
+				display: inline-block
+
+		.hand1, .hand2
+			position: absolute
+			pointer-events: none
+			svg
+				fill: transparent
+				stroke-width: 3px
+				stroke: $blue_color
+				filter: drop-shadow(0 0 15px $blue_color)
+				stroke: url(#right_lines)
+
+		.hand1
+			top: 0
+			left: 150px
+			width: 600px
+			height: 60px
+			.path
+				stroke-dasharray: 710
+				stroke-dashoffset: 710
+		.hand2
+			bottom: 0
+			left: 0
+			height: 70px
+			width: 500px
+			.path
+				stroke-dasharray: 690
+				stroke-dashoffset: 690
+				// background-color: transparentize($white, 0.8)
+
+		&.box2
+			float: right
+			padding: 30px 30px 30px 0
+			text-align: right
+			.user-desc
+				height: 240px
+			.hand1
+				left: auto
+				right: 150px
+				transform: rotateY(180deg)
+			.hand2
+				left: auto
+				right: 0
+				transform: rotateY(180deg)
+
+			.user-thumb
+				&, .thumb-wrap
+					float: right
+				.thumb-wrap
+					left: 10px
+
+	.second-title, .boxes
+		opacity: 0
+
+	&.loaded
+		.second-title, .boxes
+			opacity: 1
+
+
+// section.second-slide.animating
+// 	.boxes
+// 		.hand1
+// 			.path
+// 				animation: hand1 linear 0.4s both
+// 		.hand2
+// 			.path
+// 				animation: hand2 linear 0.4s both
+// 		&.box1
+// 			.hand1 .path
+// 				animation-delay: 0.5s
+// 			.hand2 .path
+// 				animation-delay: 0.9s
+// 		&.box2
+// 			.hand1 .path
+// 				animation-delay: 1.2s
+// 			.hand2 .path
+// 				animation-delay: 1.6s
+// 		&.box3
+// 			.hand1 .path
+// 				animation-delay: 2.0s
+// 			.hand2 .path
+// 				animation-delay: 2.4s
+
+			
+@keyframes hand1
+	0%
+		stroke-dashoffset: -710
+	100%
+		stroke-dashoffset: 0
+
+@keyframes hand2
+	0%
+		stroke-dashoffset: 690
+	100%
+		stroke-dashoffset: 0
+
+
+@keyframes arms
+	0%
+		width: 0px
+		height: 0
+	50%
+		width: 135px
+		height: 0
+	100%
+		width: 155px
+		height: 50px
