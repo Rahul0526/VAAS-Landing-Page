@@ -48,13 +48,15 @@ section.joining-section
 			background-color: $purple
 
 	&.sixth-seventh
-		.after
-			background-color: $white
+		filter: drop-shadow(0 0 50px $black)
+		.before
+			background-color: $purple
 
 	&.seventh-eighth
+		filter: drop-shadow(0 -10px 50px $black)
 		height: 500px
-		background-color: $white
-		margin-bottom: -200px
+		// background-color: $white
+		// margin-bottom: -100px
 
 		.before, .after
 			top: 0
@@ -64,6 +66,7 @@ section.joining-section
 			transform: skewY(10deg)
 			box-shadow: 0 -5px 0 $white
 			z-index: 2
+			top: 10px
 		.after
 			transform: skewY(-10deg)
 			background-color: $purple

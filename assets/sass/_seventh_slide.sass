@@ -1,10 +1,51 @@
 .seventh-slide
-	background-color: $white
-	color: $textColor
-	.content-wrapper
-		.bgi
-			background: url(../images/worldmap.png) no-repeat center top
-			background-color: #091022
+	background-color: #14161C
+	color: $white
+	overflow: hidden
+	.bgi
+		.svg-wrap
+			position: absolute
+			top: 50%
+			left: 50%
+			min-width: calc(100% + 4px)
+			min-height: calc(100% + 4px)
+			transform: translateX(-50%) translateY(-50%)
+
+		svg
+			position: absolute
+			min-width: 100%
+			min-height: 100%
+			top: 0
+			left: 0
+			path
+				&.layer1
+					fill-opacity: 0.1
+				&.layer2
+					fill-opacity: 0.24
+				&.layer3
+					fill-opacity: 0.38
+				&.layer4
+					fill-opacity: 0.52
+				&.layer5
+					fill-opacity: 0.66
+				&.layer6
+					fill-opacity: 0.8
+				&.layer7
+					fill-opacity: 1
+			g
+				pointer-events: initial
+				fill: $purple
+				// &.group2
+				// 	fill: $blue_color
+				// &.group3
+					// fill: #14161C
+				// &.group4
+				// 	fill: $dark-red
+				// &.group5
+				// 	fill: $orange_color
+				// &.group6
+				// 	fill: $orange_color2
+
 
 	.section-body
 		padding: 100px 0 350px

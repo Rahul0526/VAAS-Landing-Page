@@ -478,6 +478,9 @@ $(function() {
 									} else if($(this).is('#sixth-slide')) {
 										animateSixthSlide();
 									} else if($(this).is('#seventh-slide')) {
+										$('html, body').animate({
+											scrollTop: $(this).offset().top + 150
+										}, 1000);
 										animateSeventhSlide();
 									} else if($(this).is('#eighth-slide')) {
 										animateEighthSlide();
@@ -950,7 +953,8 @@ function animateThirdSlide() {
 	$('.third-slide .secure-cont p').empty().append(desc.lines);
 
 	tl
-	.staggerFromTo(mainTitle1.chars, 0.5, {scale:0, x:80, rotateY:180}, {scale:1, x:0, rotateY:0, delay:3.5, transformOrigin:"0% 50% -50", ease:Back.easeOut}, 0.05, 'start')
+	.from('.third-slide .animatedTitle', 0.5, {opacity:0, delay:3})
+	.staggerFromTo(mainTitle1.chars, 0.5, {scale:0, x:80, rotateY:180}, {scale:1, x:0, rotateY:0, transformOrigin:"0% 50% -50", ease:Back.easeOut}, 0.05, 'start')
 	.staggerFromTo(mainTitle2.chars, 0.5, {scale:0, x:-80, rotateY:180}, {scale:1, x:0, rotateY:0, transformOrigin:"0% 50% -50", ease:Back.easeOut}, 0.05)
 	.call(function() {
 		$('.third-slide .animatedTitle').addClass('animating')
@@ -1036,9 +1040,28 @@ function animateSeventhSlide() {
 		}
 	});
 	var title = new SplitText($('.seventh-slide .sec-title'), {type:"words,chars"});
-
+	// var j = 0;
 	tl
-	.fromTo($('.seventh-slide .video-container'), 0.8, {opacity:0, x:$('.seventh-slide .video-container').width()}, {opacity:1, x:0, delay:1})
+	.add('start', 2)
+	$('.seventh-slide .svg-wrap g').each(function() {
+		var i = 0;
+		$(this).find('path').each(function() {
+			// var delay = 0;
+			// if(j == 0) {
+			// } else {
+			// 	// delay = i==0 ? -1 : -0.8;
+			// 	tl.to($(this), 1, {morphSVG:$(this).data('original'), delay: -2})
+			// }
+			var delay = -i/10 * 2;
+			tl.to($(this), 2, {morphSVG:$(this).data('original'), fill:'#623FDF', delay: delay}, 'start')
+			i++;
+		})
+	})
+	tl
+	.from('.joining-section.sixth-seventh .before', 1, {y:"-100%"})
+	.from('.joining-section.seventh-eighth .after', 1, {y:"100%", delay:-0.8})
+	.from('.joining-section.seventh-eighth .before', 1, {y:"100%", delay:-0.8})
+	.fromTo($('.seventh-slide .video-container'), 0.8, {opacity:0, x:$('.seventh-slide .video-container').width()}, {opacity:1, x:0})
 	.staggerFrom(title.chars, 0.5, {opacity:0, scale:3, x:-10}, 0.05, "-=0.5")
 	.staggerFromTo($('.seventh-slide .secure-cont ul li'), 0.7, {opacity:0, y:-$('.seventh-slide .secure-cont ul li:first-child').outerHeight(true)}, {opacity:1, y:0, ease:Back.easeOut}, 0.1, "-=0.5")
 }
