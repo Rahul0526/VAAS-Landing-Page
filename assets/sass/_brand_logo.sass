@@ -35,6 +35,7 @@
 		width: auto
 		max-width: unset
 		height: 250px
+		height: 13vw
 
 .logo
 	animation: changeColor linear 20s infinite
@@ -47,9 +48,9 @@
 		position: relative
 		overflow: hidden
 		opacity: 1
-		width: 620px
+		width: 500px
 		padding: 2px
-		height: 60px
+		height: 46px
 		opacity: 1
 		transform: scale(1)
 		// transition: transfrom linear 0.5s 1s, width linear 0.5s 0s
@@ -73,8 +74,8 @@
 		input
 			border: none
 			// border-radius: 50px
-			height: 56px
-			font-size: 26px
+			height: 42px
+			font-size: 20px
 			padding: 0 56px 3px 0
 			// text-indent: 70px
 			width: 100%
@@ -165,6 +166,26 @@
 // 			.arrow
 // 				transition: all linear 0.5s
 .video-slide
+	.slide
+		position: absolute
+		width: 100%	
+		height: 100%
+		left: 0
+		top: 0
+		transform-origin: bottom center
+		transition: all ease 0.5s
+		&.slide1
+			transform: translateY(0vw) scale(1, 1)
+			// transform: translateY(-0.8vw) scale(1, 0.97)
+		&.slide2
+			transform: translateY(0vw) scale(1, 1)
+			// transform: translateY(-1.9vw) scale(0.99, 0.90)
+		&.slide3
+			transform: translateY(0vw) translateX(0) scale(1, 1)
+			// transform: translateY(-3.6vw) translateX(5px) scale(0.98, 0.84)
+		&.slide4
+			transform: translateY(0vw) translateX(0) scale(1, 1)
+			// transform: translateY(-6vw) translateX(5px) scale(0.97, 0.75)
 	.intro-slide
 		padding: 0
 		display: table
@@ -174,22 +195,21 @@
 		perspective: 700px
 		transform-style: preserve-3D
 		img
-			max-width: 1190px
-	.slide
-		position: absolute
-		width: 100%	
-		height: 100%
-		left: 0
-		top: 0
-		transform-origin: bottom center
-		&.slide1
-			transform: translateY(-16px) scale(1, 0.97)
-		&.slide2
-			transform: translateY(-37px) scale(0.99, 0.90)
-		&.slide3
-			transform: translateY(-70px) translateX(5px) scale(0.98, 0.84)
-		&.slide4
-			transform: translateY(-115px) translateX(5px) scale(0.97, 0.75)
+			width: 950px
+		&.move
+			.slide
+				&.slide1
+					// transform: translateY(15px) scale(1, 0.97)
+					transform: translateY(-0.8vw) scale(1, 0.97)
+				&.slide2
+					// transform: translateY(-37px) scale(0.99, 0.90)
+					transform: translateY(-1.9vw) scale(0.99, 0.90)
+				&.slide3
+					// transform: translateY(-70px) translateX(5px) scale(0.98, 0.84)
+					transform: translateY(-3.6vw) translateX(5px) scale(0.98, 0.84)
+				&.slide4
+					// transform: translateY(-115px) translateX(5px) scale(0.97, 0.75)
+					transform: translateY(-6vw) translateX(5px) scale(0.97, 0.75)
 	a.play
 		top: 11px
 		bottom: auto

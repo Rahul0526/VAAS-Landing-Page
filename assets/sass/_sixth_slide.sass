@@ -5,9 +5,6 @@
 	.section-body
 		padding: 250px 0 150px
 
-	.automate-cont
-		padding: 0 0 50px 0
-
 	img
 		max-width: 100%
 		border-radius: 9px
@@ -28,28 +25,44 @@
 		vertical-align: top
 
 	.automate-cont
-		margin-top: 200px
+		margin: 0
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-content: center
 		ul li
 			color: $white
 			line-height: 50px
 
 	.mobile-frame
 		transform: scale(1)
-		width: 520px
-		height: 750px
+		width: 70%
+		// height: 750px
 		background-image: url('http://vass.augurstech.com/update/_landing_page/assets/images/mobile-frame.png')
 		background-repeat: no-repeat
 		background-position: center
 		background-size: contain
 		padding: 40px 37px
 		float: right
+		position: relative
+		&:before
+			content: ""
+			float: left
+			width: 100%
+			padding-top: 149.5%
 		.video-container
+			position: absolute
+			top: 5.5%
+			left: 7%
+			width: calc(100% - 14%)
+			height: calc(100% - 11%)
 			overflow: hidden
-			border-radius: 22px
+			border-radius: 1vw
 			transform: scale(1)
 			margin-top: 0
 		.video-wrapper
 			float: left
+			width: 100%
 
 		video
 			margin-top: -5px

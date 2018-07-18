@@ -2,7 +2,7 @@ section.joining-section
 	display: inline-block
 	float: left
 	position: relative
-	height: 350px
+	// height: 350px
 	width: 100%
 	overflow: hidden
 	z-index: 1
@@ -11,7 +11,7 @@ section.joining-section
 		display: inline-block
 		position: absolute
 		width: 100%
-		height: 100%
+		// height: 100%
 		transform: skewY(-10deg)
 	.before
 		transform-origin: top left
@@ -70,6 +70,8 @@ section.joining-section
 		.after
 			transform: skewY(-10deg)
 			background-color: $purple
+			box-sizing: initial
+			padding-bottom: 10px
 
 	&.eighth-ninth
 		.after

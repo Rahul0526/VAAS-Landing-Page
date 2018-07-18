@@ -552,6 +552,7 @@ function initializeSystem() {
 		onComplete:function() {
 			enableScroll();
 			backToCss(elems)
+			backToCss($('#first-slide .video-slide a.play'))
 		}
 	});
 	// msg1 = new SplitText(".systemInitialization .msg1", {type:"words,chars"});
@@ -576,8 +577,11 @@ function initializeSystem() {
 	.add('showpage')
 	.call(showPage)
 	.staggerFrom(elems, 1, {autoAlpha:0, scale:2, delay:1}, 0.1 )
-	.staggerFrom($('.intro-slide .slide'), 0.5, {transform:'translateX(0px) translateY(0px) scale(1,1)'}, 0.1 )
-	.fromTo('#first-slide .video-slide a.play', 0.5, {scale:0}, {scale:1, delay: -0.2, ease:Bounce.easeOut})
+	.call(function() {
+		$('.intro-slide').addClass('move')
+	})
+	// .staggerFrom($('.intro-slide .slide'), 0.5, {transform:'translateX(0vw) translateY(0px) scale(1,1)'}, 0.1 )
+	.fromTo('#first-slide .video-slide a.play', 0.5, {scale:0}, {scale:1, delay: 0.3, ease:Bounce.easeOut})
 	.fromTo('header', 1, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'})
 	.from('#first-slide .bgi', 1.3, {autoAlpha:0})
 

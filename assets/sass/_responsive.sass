@@ -1,27 +1,175 @@
-@media screen and (min-width: 1800px)
+@media screen and (min-width: 1950px)
+	body, .btn
+		font-size: 0.85vw
+
+	h3.sec-title
+		font-size: 2.1vw
+		letter-spacing: 0.63vw
+
+	.secure-cont, .automate-cont
+		span
+			font-size: 1.46vw
+		ul li
+			font-size: 1.35vw
+			line-height: 2vw
+
+	.automate-cont
+		ul li
+			line-height: 2.05vw
+
+	.animatedTitle
+		.subTitle
+			letter-spacing: 0.55vw
+			font-size: 1.04vw
+		.mainTitle
+			font-size: 2.93vw
+			letter-spacing: 1.47vw
+			line-height: 3.1vw
+	.btn
+		padding: 0.25vw 1.1vw
+		margin-right: 1.1vw
+		border-radius: 0.25vw
+
 	.container
-		max-width: 1700px
+		max-width: 90%
+
+	.video-container
+		perspective: 900px
+		.video-wrapper
+			&.left-bent
+				transform: rotateY(-12deg) scale(1, 1.2)
+			.controls-strip
+				height: 5vw
+				.maximize-video
+					width: 4vw
+					height: 4vw
+
+	.section-body
+		width: 100%
+	
+	header.haeader-panel
+		.navbar
+			.navbar-nav
+				width: 30vw
+				li
+					a
+						font-size: 1vw
+
 	.first-slide
 		.slide-content
-			padding-top: 70px
+			// padding-top: 70px
+			padding-top: 2vw
 		.main-title
+			margin-top: 5.2vw
 			h1
-				font-weight: 300
-				line-height: 50px
 				margin-bottom: 0
+				font-size: 2.45vw
+				line-height: 2.95vw
+
+		span.sub-title
+			font-size: 1.46vw
+
 		.slide-logo
-			height: 250px
+			&, img
+				height: 13vw
+
+		.get-started
+			.input-field
+				width: 33vw
+				height: 3vw
+				border-radius: 0.5vw
+			input
+				height: calc(3vw - 4px)
+				font-size: 1.3vw
+				text-indent: 1vw
+				border-radius: 0.5vw
+
+		.video-slide
+			.intro-slide
+				margin-top: 4vw
+				img
+					width: 60vw
+			a.play
+				width: 5vw
+				height: 5vw
+				margin-left: -2.5vw
+				top: 2vw
+				&:before
+					border-width: 0.7vw 0 0.7vw 1.2vw
 
 	.second-slide
 		.content-wrapper
 			.section-body
 				padding-top: 180px
-			.how-it-work
-				margin-top: 30px
+
+		.second-title
+			.sub-title
+				font-size: 1.8vw
+
+		.how-it-work
+			max-width: 70%
+			margin-top: 30px
+			p
+				font-size: 0.94vw
+				letter-spacing: 0.05vw
+
+			h3
+				font-size: 2.02vw
+				margin-bottom: 0.8vw
+
+		.boxes
+			max-width: 85%
+			margin-top: 8vh
+			&, &.box2
+				padding-top: 1vh
+				padding-bottom: 5vh
+			.hand1, .hand2
+				svg
+					width: 100%
+					height: 100%
+			.hand1
+				top: 0
+				width: 70%
+				height: 5.5vh
+				left: 12%
+			.hand2
+				width: 55%
+				height: 8vh
+				// left: 8%
+			.user-thumb
+				width: 20vh
+				.thumb-wrap
+					left: 2vh
+					top: 1.5vh
+				svg
+					width: 13vh
+			.user-desc
+				height: auto
+				min-height: 18vh
+				width: calc(100% - 20vh)
+			&.box2
+				.hand1
+					right: 12%
+				.user-thumb
+					.thumb-wrap
+						left: auto
+						right: 2vh
+						top: 1.5vh
+				.user-desc
+					height: auto
 
 	.third-slide
+		.content-wrapper
+			padding: 22vw 0
 		.outer
 			margin-top: 80px
+
+		.secure-cont
+			top: 12vw
+			padding-top: 3.5vw
+			p
+				font-size: 1.35vw
+				margin-bottom: 1.7vw
 
 	.forth-slide
 		.outer
@@ -31,9 +179,56 @@
 		// .atomate-img
 		// 	margin-top: 30px
 	
+	.fifth-slide
+		.video-container
+			top: 5.5vw
+
 	.sixth-slide, .seventh-slide, .eighth-slide, .ninth-slide
 		.outer
 			margin-top: 150px
+
+	.sixth-slide
+		.automate-cont
+			ul
+				li
+					line-height: 2.63vw
+		.mobile-frame
+			width: 60%
+			padding: 4.9% 4.4%
+
+	.seventh-slide
+		.secure-cont
+			ul
+				li
+					line-height: 2.65vw
+
+	.eighth-slide
+		.section-body
+			height: 52vw
+		.sec-title
+			margin-bottom: 2.65vw
+		.description
+			perspective: 1300px
+			.secure-cont
+				ul li
+					line-height: 1.7vw
+					margin-bottom: 1.2vw
+		.video-container
+			top: 5.2vw
+			perspective: 1300px
+			video
+				height: 50vw
+
+	.ninth-slide
+		.video-container
+			transform: scale(1, 1)
+			perspective: 900px
+		.automate-cont
+			span
+				font-size: 1.36vw
+				line-height: 1.75vw
+			ul li
+				line-height: 2.5vw
 
 	.tenth-slide
 		.outer
@@ -42,11 +237,22 @@
 	.eleventh-slide
 		.outer
 			margin-top: 40px
-	
-	.section-body
-		width: 1700px
 
-@media screen and (max-width: 1800px)
+	footer
+		.footer-links
+			h3
+				font-size: 1.25vw
+			ul li
+				margin-left: 0.9vw
+
+		.footer-content .container
+			margin-top: 2vw
+			margin-bottom: 1vw
+	
+@media screen and (max-width: 1950px)
+
+	.container
+		max-width: 1700px
 	.section-body
 		width: calc(100% - 100px)
 		.outer
@@ -74,22 +280,17 @@
 
 		.get-started
 			margin-top: 0
-			.input-field
-				height: 46px
-				input
-					height: 42px
 					// width: 42px
 
 		.video-slide 
 			margin-bottom: 0
 			.intro-slide
 				margin-top: 80px
-				img
-					width: 950px
+				// im
+					// width: 950px
 			a.play
 				width: 90px
 				height: 90px
-				top: 50px
 	
 	.second-title 
 		// padding: 0 50px
@@ -110,13 +311,6 @@
 			margin-top: 80px
 
 	section.fixed-section
-		&, &.animating
-			.get-started .input-field
-				width: 500px
-				height: 46px
-				input
-					height: 42px
-					font-size: 20px
 		.how-it-work 
 			.boxes
 				&.box1, &.box3 
@@ -134,16 +328,13 @@
 
 @media screen and (max-width: 1600px)
 	section.joining-section
-		height: 250px
 		&:before, &:after
 			transform: skewY(-7deg)
 
 	.automate-cont ul li
 		font-size: 24px
 
-	.third-slide 
-		.content-wrapper
-			padding: 200px 0
+	.third-slide
 		.secure-cont
 			width: calc(100% + 150px)
 
@@ -170,7 +361,6 @@
 
 @media screen and (max-width: 1366px)
 	section.joining-section
-		height: 200px
 		&.seventh-eighth
 			height: 450px
 		&.ninth-tenth
@@ -318,7 +508,6 @@
 		font-size: 35px
 		letter-spacing: 5px
 	section.joining-section
-		height: 150px
 		&.seventh-eighth
 			height: 400px
 

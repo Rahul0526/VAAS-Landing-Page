@@ -17,39 +17,29 @@
 		z-index: 99
 		cursor: pointer
 		&.square-icon
-			width: 24px
-			height: 16px
-			// border: 1px solid $white
-			top: 12px
-			right: 10px
-			display: inline-block
-			filter: drop-shadow(0px 0px 5px $black) drop-shadow(0px 0px 5px $black) drop-shadow(0px 0px 5px $black)
-			i
-				display: inline-block
-				width: 24px
-				height: 16px
-				&:before, &:after
-					content: ''
-					position: absolute
-					width: 1px
-					height: 1px
-					// background-color: $white
-					left: 0
-					top: 0
-				&:before
-					left: -1px
-					height: 6px
-					box-shadow: 1px 0 0 $white, 24px 0 0 $white, 1px 10px 0 $white, 24px 10px 0 $white
-				&:after
-					top: -1px
-					width: 8px
-					box-shadow: 1px 1px 0 $white, 1px 16px 0 $white, 16px 1px 0 $white, 16px 16px 0 $white
+			// width: 24px
+			// height: 16px
+			// // border: 1px solid $white
+			// top: 12px
+			// right: 10px
+			// display: inline-block
+			// filter: drop-shadow(0px 0px 5px $black) drop-shadow(0px 0px 5px $black) drop-shadow(0px 0px 5px $black)
+			svg
+				position: absolute
+				width: 60%
+				left: 50%
+				top: 50%
+				transform: translateX(-50%) translateY(-50%)
+				stroke-width: 1px
+				stroke: $white
+				fill: transparent
+
 	.play-button
 		position: absolute
 		z-index: 99
-		top: 50%
+		bottom: 20px
 		left: 50%
-		transform: translateX(-50%) translateY(-50%)
+		transform: translateX(-50%)
 		width: 80px
 		height: 80px
 		border-radius: 100%
@@ -83,7 +73,7 @@
 			border-width: 7px 0 7px 12px
 
 		&.playing
-			transform: translateX(-50%) translateY(-50%) scale(0)
+			transform: translateX(-50%) scale(0)
 			transition: all linear 0.2s
 
 			&:before, &:after
@@ -96,7 +86,7 @@
 				margin-left: 8px
 			
 		&.autohide
-			transform: translateX(-50%) translateY(-50%) scale(0)
+			transform: translateX(-50%) scale(0)
 			transition: all linear 0.3s
 
 
@@ -159,7 +149,7 @@
 		&.playing
 			opacity: 0
 			.play-button
-				transform: translateX(-50%) translateY(-50%) scale(0)
+				transform: translateX(-50%) scale(0)
 				transition: all linear 0.2s
 				&:before, &:after
 					margin-left: -2px
@@ -181,12 +171,14 @@
 		border: 2px solid transparentize($blue_color, 0.5)
 		pointer-events: none
 		width: 100%
+		position: relative
+		z-index: -1
 	
 	&:hover
 		.play-button
 			&.autohide, &.playing
 				transition: all cubic-bezier(.47,.74,.28,1.61) 0.3s
-				transform: translateX(-50%) translateY(-50%) scale(1)
+				transform: translateX(-50%) scale(1)
 
 		.controls-strip
 			transition-duration: 0.15s
@@ -209,7 +201,7 @@
 				transition-timing-function: linear
 				opacity: 0
 				cursor: none
-				transform: translateX(-50%) translateY(-50%) scale(0)
+				transform: translateX(-50%) scale(0)
 
 
 .video-container
