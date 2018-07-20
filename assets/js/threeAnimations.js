@@ -572,7 +572,7 @@ function initializeSystem() {
 	.fromTo('.systemInitialization .msg3, #bodyBg #canvas3d', 1.3, {autoAlpha:0}, {autoAlpha:1, delay:0.2}, 'showGrid')
 	.from('.systemInitialization .msg3', 1, {y:50})
 	.staggerFrom(chars2, 1, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50", ease:Back.easeOut}, 0.03, "-=1.2")
-	// .staggerTo(chars2, 0.8, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50",  ease:Back.easeOut, delay:1}, 0.02, "+=0")
+	.staggerTo(chars2, 0.8, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50",  ease:Back.easeOut, delay:1}, 0.02, "+=0")
 	.to('.systemInitialization .msg3, #bodyBg #canvas3d', 1, {autoAlpha:0, delay:1})
 	.add('showpage')
 	.call(showPage)
@@ -583,7 +583,7 @@ function initializeSystem() {
 	// .staggerFrom($('.intro-slide .slide'), 0.5, {transform:'translateX(0vw) translateY(0px) scale(1,1)'}, 0.1 )
 	.fromTo('#first-slide .video-slide a.play', 0.5, {scale:0}, {scale:1, delay: 0.3, ease:Bounce.easeOut})
 	.fromTo('header', 1, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'})
-	.from('#first-slide .bgi', 1.3, {autoAlpha:0})
+	.fromTo('#first-slide .bgi canvas', 1.3, {autoAlpha:0}, {autoAlpha:1})
 
 	// tl.play('showpage')
 }

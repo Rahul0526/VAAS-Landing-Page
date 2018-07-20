@@ -259,11 +259,7 @@
 			margin-top: 80px
 	
 	header.haeader-panel 
-		.logo
-			margin-top: 30px
-
 		.navbar 
-			margin-top: 14px
 			.navbar-nav
 				width: 500px
 		.login-signup
@@ -610,14 +606,225 @@
 				.controls-strip .controls
 					left: 35%
 
+@media screen and (min-width: 992px)
+	.second-slide
+		.second-title, .boxes
+			opacity: 0
+
+		&.loaded
+			.second-title, .boxes
+				opacity: 1
+
+	.third-slide
+		.joining-section
+			position: absolute
+			z-index: 10
+			// height: calc(50% +
+			&.second-third
+				left: 0
+				top: 0
+				height: 100%
+				.before, .after
+					background-color: #04050A
+					transition: all ease-out 1s 1s
+					z-index: 1
+				.after
+					bottom: 0
+					top: auto
+				.top-flap, .bottom-flap
+					position: absolute
+					width: 100%
+					height: 50%
+					left: 0
+					background-color: #04050A
+					transition: all ease 2s 1.6s
+					transform: skewY(-10deg)
+					z-index: 0
+					&:before
+						content: ''
+						position: absolute
+						left: 0
+						width: 100%
+						height: 1px
+						background-color: $purple
+						transform-origin: center
+						transition: all ease 0.5s 1s
+						transform: scale(0, 1)
+				.top-flap
+					top: 1px
+					transform-origin: bottom center
+					&:before
+						bottom: 0
+				.bottom-flap
+					transform-origin: top center
+					bottom: 1px
+					&:before
+						top: 0
+
+		.backdor, .backdor-shield, .sec-title, p
+			opacity: 0
+
+		&.loaded
+			.backdor, .backdor-shield, .sec-title, p
+				opacity: 1
+
+			.joining-section
+				&.second-third
+					.top-flap, .bottom-flap
+						&:before
+							transform: scale(1,1)
+					.top-flap
+						top: -50%
+					.bottom-flap
+						bottom: -50%
+
+	.fourth-slide
+		.sec-title, .automate-cont span, .automate-cont ul li, .video-container
+			opacity: 0
+
+		&.loaded
+			.sec-title, .automate-cont span, .automate-cont ul li, .video-container
+				opacity: 1
+
+	.fifth-slide
+		.sec-title, .automate-cont ul li, .video-container, .joining-section
+			opacity: 0
+
+		&.loaded
+			.sec-title, .automate-cont ul li, .video-container
+				opacity: 1
+
+	.sixth-slide
+		.sec-title, .automate-cont ul li, .mobile-frame
+			opacity: 0
+
+		&.loaded
+			.sec-title, .automate-cont ul li, .mobile-frame
+				opacity: 1
+
+	.seventh-slide
+		.sec-title, .secure-cont ul li, .video-container
+			opacity: 0
+
+		&.loaded
+			.sec-title, .secure-cont ul li, .video-container
+				opacity: 1
+
+	.eighth-slide
+		.sec-title, .secure-cont ul li, .video-container
+			opacity: 0
+
+		&.loaded
+			.sec-title, .secure-cont ul li, .video-container
+				opacity: 1
+
+	.ninth-slide
+		.sec-title, .automate-cont span, .automate-cont ul li, .video-container
+			opacity: 0
+
+		&.loaded
+			.sec-title, .automate-cont span, .automate-cont ul li, .video-container
+				opacity: 1
+
+	.eleventh-slide
+		.api-container
+			ul
+				position: absolute
+				width: 200px
+				height: 200px
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+
+				li
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					&:nth-of-type(1)
+						top: -230px
+						left: -460px
+						transform: translateY(230px) translateX(460px)
+					&:nth-of-type(2)
+						top: -230px
+						left: 0px
+						transform: translateY(230px) translateX(0px)
+					&:nth-of-type(3)
+						top: -230px
+						left: 460px
+						transform: translateY(230px) translateX(-460px)
+
+					&:nth-of-type(4)
+						top: -115px
+						left: -690px
+						transform: translateY(115px) translateX(460px)
+					&:nth-of-type(5)
+						top: -115px
+						left: -230px
+						transform: translateY(115px) translateX(230px)
+					&:nth-of-type(6)
+						top: -115px
+						left: 230px
+						transform: translateY(115px) translateX(-230px)
+					&:nth-of-type(7)
+						top: -115px
+						left: 690px
+						transform: translateY(115px) translateX(-460px)
+					&:nth-of-type(8)
+						top: 0px
+						left: -460px
+						transform: translateY(0) translateX(460px)
+					&:nth-of-type(9)
+						top: 0px
+						left: 460px
+						transform: translateY(0) translateX(-460px)
+					&:nth-of-type(10)
+						top: 115px
+						left: -690px
+						transform: translateY(-115px) translateX(460px)
+					&:nth-of-type(11)
+						top: 115px
+						left: -230px
+						transform: translateY(-115px) translateX(230px)
+					&:nth-of-type(12)
+						top: 115px
+						left: 230px
+						transform: translateY(-115px) translateX(-230px)
+					&:nth-of-type(13)
+						top: 115px
+						left: 690px
+						transform: translateY(-115px) translateX(-460px)
+					&:nth-of-type(14)
+						top: 230px
+						left: -460px
+						transform: translateY(-115px) translateX(460px)
+					&:nth-of-type(15)
+						top: 230px
+						left: 0px
+						transform: translateY(-115px) translateX(0px)
+					&:nth-of-type(16)
+						top: 230px
+						left: 460px
+						transform: translateY(-115px) translateX(-460px)
+					&:hover
+						background-color: $purple
+						img
+							opacity: 1
+							transform: scale(1)
+
 @media screen and (max-width: 992px)
 	h3.sec-title
 		font-size: 30px
 
-	section.block .section-body
-		display: inline-block
-		width: calc(100% - 50px)
-		margin-left: 25px
+	section.block 
+		min-height: unset
+		.section-body
+			display: inline-block
+			width: calc(100% - 50px)
+			margin-left: 25px
+		&.first-slide
+			min-height: 100vh
 
 	.automate-cont, .secure-cont
 		ul
@@ -631,11 +838,13 @@
 	span.sub-title
 		font-size: 24px
 
-	section.block.first-slide 
+	header
+		.logo
+			height: 56px
+
 	.first-slide
 		.slide-logo img
-			width: 100%
-			height: auto
+			height: 20vw
 
 		.video-slide
 			a.play
@@ -648,6 +857,88 @@
 				width: 100%
 				img
 					width: 100%
+
+	.second-slide
+		padding-bottom: 80px
+		.how-it-work
+			h3
+				margin-bottom: 10px
+				padding-left: 100px
+			p
+				text-indent: 70px
+		.boxes
+			&, &.box2
+				padding: 0
+				float: left
+				text-align: left
+				.user-thumb
+					background: #04050A
+					float: left
+					.thumb-wrap
+						top: 0
+						left: 0
+
+				.user-desc
+					height: auto
+
+				.hand1, .hand2
+					transform: none
+					right: auto
+					bottom: auto
+					background-color: #04050A
+					width: calc(100% - 44px)
+					left: 21px
+					height: calc(100% - 74px)
+					top: 60px
+					border-radius: 20px
+					&.hand1
+						width: calc(100% - 40px)
+						left: 20px
+						height: calc(100% - 70px)
+						top: 59px
+						// background-color: red
+						background: linear-gradient(135deg, $blue_color, $purple, $purple, transparent 85%)
+						overflow: hidden
+					svg
+						display: none
+
+			.user-thumb
+				position: relative
+				border-radius: 100%
+				width: 160px
+				padding: 20px
+				margin-bottom: -80px
+				z-index: 10
+				left: -20px
+				.thumb-wrap
+					top: 0
+					left: 0
+					right: auto
+					
+				svg
+					width: 100%
+			.user-desc
+				padding: 0 50px 20px
+				width: auto
+				min-height: unset
+				position: relative
+				z-index: 9
+				// .user-desc-wrap
+				// 	&:before
+				// 		content: ''
+				// 		float: left
+				// 		width: 200px
+				// 		height: 120px
+
+	.third-slide
+		.section-body
+			padding-bottom: 150px
+		.backdor
+			margin-bottom: 80px
+		.backdor-shield
+			width: 100%
+			left: 0
+			top: 45%
 
 	.fifth-slide 
 		.automate-cont
@@ -678,6 +969,33 @@
 				font-size: 18px
 				line-height: 26px
 
+	.eleventh-slide 
+		.automate-cont
+			margin-top: 0
+			margin-bottom: 15vw
+		.api-container
+			margin-top: 30px
+			.logo
+				display: none
+			ul 
+				position: relative
+				width: calc(100% + 20px)
+				top: 0
+				left: -10px
+				transform: none
+				text-align: center
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				justify-content: space-evenly
+				li
+					flex: 0 0 30%
+					// width: calc(33)
+					float: none
+					margin: 10px
+					opacity: 1
+					position: relative
+
 @media screen and (min-width: 890px)
 	.second-slide
 		.content-wrapper
@@ -688,9 +1006,10 @@
 		.outer
 			margin-top: 0px
 
-
-
 @media screen and (max-width: 768px)
+	header
+		.navbar
+			background-color: $black
 	.video-container.zoomed,
 	.video-container.zoomable
 		&:before
@@ -705,6 +1024,25 @@
 			left: 0
 			top: 0
 
+	.animatedTitle 
+		display: inline-block
+		width: calc(100% + 50px)
+		margin-left: -25px
+		.subTitle
+			letter-spacing: 1vw
+			font-size: 2.8vw
+		.mainTitle
+			font-size: 30px
+			font-size: 6vw
+			letter-spacing: 2.5vw
+			span
+				&:before, &:after
+					width: 80%
+				&:before
+					animation: moveLeftRight ease 6s, moveLeftRightLoop ease 6s 6s infinite
+				&:after
+					animation: moveRightLeft ease 7s 0.5s, moveRightLeftLoop ease-in-out 5s 7.5s infinite
+
 	.automate-cont, .secure-cont
 		text-align: center
 		ul
@@ -712,17 +1050,67 @@
 			li
 				list-style: none
 
+	
+	.second-slide
+		padding-bottom: 30vw
+		.second-title .sub-title
+			font-size: 3.5vw
+			margin-top: 30px
+		.how-it-work
+			h3
+				font-size: 24px
+				font-weight: 500
+				padding-left: 60px
+			p
+				font-size: 14px
+				text-indent: 20px
+		.boxes
+			margin-top: 30px
+			.user-thumb
+				position: relative
+				border-radius: 100%
+				width: 120px
+				padding: 20px
+				margin-bottom: -45px
+				z-index: 10
+				left: -20px
+				.thumb-wrap
+					top: 0
+					left: 0
+					right: auto
+					
+				svg
+					width: 100%
+			.user-desc
+				padding: 0 50px 20px
+				width: auto
+				min-height: unset
+				position: relative
+				z-index: 9
 
 	.third-slide
+		.sec-title
+			display: none
+		.bgi
+			background-color: $black
+			&:before
+				background-size: cover
+			&:after
+				// opacity: 0.5
+		.content-wrapper
+			padding: 30vw 0
 		.row
 			position: relative
+
+		.backdor
+			margin-bottom: 20vw
 
 		.section-body
 			padding-top: 50px
 		.secure-cont
 			margin-left: 0
 			width: 100%
-			padding: 200px 20px 0
+			padding: 30vw 20px 0
 			p
 				font-size: 16px
 
@@ -899,3 +1287,68 @@
 				.controls-strip .controls
 					left: 50%
 					transform: translateX(-50%)
+
+@media screen and (max-width: 630px)
+	.eleventh-slide 
+		.api-container
+			ul
+				li
+					flex: 45%
+
+@media screen and (max-width: 540px)
+	.systemInitialization 
+		h2
+			font-size: 5vw
+			line-height: 7vw
+		.msg3 .vertical-block.vb2
+			margin-top: -50px
+
+	.main-title h1
+		font-size: 5vw
+	span.sub-title
+		font-size: 3vw
+
+
+	.get-started 
+		.input-field
+			width: 90vw
+
+
+	.first-slide
+		.slide-logo img
+			height: 40vw
+
+	.second-slide 
+		.second-title 
+			.sub-title
+				font-size: 5vw
+
+		.how-it-work
+			h3
+				padding-left: 100px
+			p
+				text-indent: 80px
+		.boxes 
+			.user-thumb
+				top: 20px
+			.user-desc
+				padding: 0 10px 10px
+
+			&, &.box2
+				.hand1, .hand2
+					&.hand1
+						width: calc(100% + 10px)
+						left: -5px
+					&.hand2
+						width: calc(100% + 6px)
+						left: -4px
+
+	.third-slide
+		.backdor-shield
+			width: 200%
+			left: -50%
+			top: -20%
+
+	.eleventh-slide
+		h3.sec-title
+			font-size: 10vw

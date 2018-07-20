@@ -1,11 +1,11 @@
-header.haeader-panel
+header
 	position: fixed
 	top: 0
 	right: 0
 	width: 100%
 	z-index: 99
 	height: 80px
-	pointer-events: none
+	// pointer-events: none
 	&:after
 		transform-origin: right center
 		transform: scale(1)
@@ -13,34 +13,52 @@ header.haeader-panel
 	a
 		pointer-events: initial
 	.logo
-		margin: 30px 0 0
+		margin: 0
 		// opacity: 0.3
 		transition: all linear 0.5s
-		position: relative
+		position: absolute
 		opacity: 0
-		svg
-			width: 180px
-			height: 45px
-			stroke-width: 0.5px
-			stroke-location: outside
-			filter: none
-			padding: 0
-			// animation: changeColor linear 30s infinite
-			transition: all linear 0.5s
-			// animation: none
-			fill: black
-			filter: drop-shadow(-1px -0.7px 0px currentColor) drop-shadow(-2px -1.4px 0px currentColor) drop-shadow(-3px -2.1px 0px currentColor) drop-shadow(0 0px 10px currentColor)
+		height: 100%
+		width: 20vw
+		float: left
+		top: 0
+		left: 0
+		// svg
+		// 	width: 180px
+		// 	height: 45px
+		// 	stroke-width: 0.5px
+		// 	stroke-location: outside
+		// 	filter: none
+		// 	padding: 0
+		// 	// animation: changeColor linear 30s infinite
+		// 	transition: all linear 0.5s
+		// 	// animation: none
+		// 	fill: black
+		// 	filter: drop-shadow(-1px -0.7px 0px currentColor) drop-shadow(-2px -1.4px 0px currentColor) drop-shadow(-3px -2.1px 0px currentColor) drop-shadow(0 0px 10px currentColor)
 		img
-			margin-left: -60px
+			position: absolute
+			width: auto
+			height: 150%
+			max-width: unset
+			transform: translateY(-50%)
+			top: 50%
+			left: 0
 		&.show
 			opacity: 1
 
 	.navbar
 		text-align: center
-		margin: 44px 0 0
-		top: 20px
+		margin: 0
 		// float: left
 		transition: all linear 0.5s
+		background: $headerBg
+		.navbar-brand
+			margin: 0
+			float: left
+			width: 15%
+		.navbar-toggler
+			z-index: 1
+			float: right
 		
 		.navbar-nav
 			margin: 0
@@ -68,13 +86,11 @@ header.haeader-panel
 	nav.navbar-default
 		background: none
 		border: 0
-		ul
-			li
 
 	.login-signup
-		position: absolute
-		right: 20px
-		top: 72px
+		// position: absolute
+		// right: 20px
+		// top: 72px
 		z-index: 1
 		transition: all linear 0.3s
 		a
@@ -93,26 +109,26 @@ header.haeader-panel
 		// 	font-weight: 700
 
 	&.sticky
-		background: $headerBg
-		&:after
-			transform: scale(0)
-		.logo
-			margin: 0
-			img
-				height: 80px
-			svg
-				height: 30px
-				width: 130px
-		.navbar
-			top: 0
-			margin-top: 0
-			padding: 0
-			li
-				a
-					line-height: 80px
-					display: inline-block
-		.login-signup
-			top: 24px
+	// 	background: $headerBg
+	// 	&:after
+	// 		transform: scale(0)
+	// 	.logo
+	// 		margin: 0
+	// 		img
+	// 			height: 80px
+	// 		svg
+	// 			height: 30px
+	// 			width: 130px
+	// 	.navbar
+	// 		top: 0
+	// 		margin-top: 0
+	// 		padding: 0
+	// 		li
+	// 			a
+	// 				// line-height: 80px
+	// 				display: inline-block
+	// 	.login-signup
+	// 		top: 24px
 
 .btn
 	display: inline-block

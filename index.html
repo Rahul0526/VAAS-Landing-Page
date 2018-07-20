@@ -4,6 +4,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>VAAS</title>
 	<link href="http://vass.augurstech.com/update/_landing_page/assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
 	<link href="http://vass.augurstech.com/update/_landing_page/assets/css/animate.css" rel="stylesheet" type="text/css">
@@ -12,110 +13,112 @@
 	<link href="assets/fonts/fonts.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/new-style.css" rel="stylesheet" type="text/css">
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
-	<svg class="filter" width="660" height="220">
-		<defs>
-			<linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-				<stop offset="0%" class="stop1"/>
-				<stop offset="100%" class="stop2"/>
-			</linearGradient>
-			<linearGradient id="grid_vertical" x1="0%" y1="0%" x2="100%" y2="0%">
-				<stop offset="0%" class="stop1"/>
-				<stop offset="20%" class="stop2"/>
-				<stop offset="80%" class="stop3"/>
-				<stop offset="100%" class="stop4"/>
-			</linearGradient>
-			<linearGradient id="left_lines" x1="0%" y1="0%" x2="100%" y2="0%">
-				<stop offset="0%" class="stop1"/>
-				<stop offset="33%" class="stop2"/>
-				<stop offset="66%" class="stop3"/>
-				<stop offset="100%" class="stop4"/>
-			</linearGradient>
-			<linearGradient id="right_lines" x1="0%" y1="0%" x2="100%" y2="0%">
-				<stop offset="0%" class="stop1"/>
-				<stop offset="33%" class="stop2"/>
-				<stop offset="66%" class="stop3"/>
-				<stop offset="100%" class="stop4"/>
-			</linearGradient>
-			<linearGradient id="spam_lines_left" x1="0%" y1="0%" x2="100%" y2="0%">
-				<stop offset="0%" class="stop1"/>
-				<stop offset="80%" class="stop2"/>
-				<stop offset="100%" class="stop3"/>
-			</linearGradient>
-			<linearGradient id="spam_lines_right" x1="0%" y1="0%" x2="100%" y2="0%">
-				<stop offset="0%" class="stop1"/>
-				<stop offset="20%" class="stop2"/>
-				<stop offset="100%" class="stop3"/>
-			</linearGradient>
-			<pattern id="logoStroke" patternUnits="userSpaceOnUse" width="600" height="100">
-				<image x="0" y="0" width="600" height="100" xlink:href="assets/images/logo-stroke.jpg" />
-			</pattern>
-		</defs>
-	</svg>
-	<svg class="filter" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
-		<defs>
-			<clipPath id="id0">
-				<path d="M144.39 0.61c79.4,0 143.77,35.23 143.77,78.69 0,43.46 -64.37,78.69 -143.77,78.69 -79.4,0 -143.77,-35.23 -143.77,-78.69 0,-43.46 64.37,-78.69 143.77,-78.69z"></path>
-			</clipPath>
-			<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0">
-				<stop class="stop1" offset="0%" />
-				<stop class="stop2" offset="25%" />
-				<stop class="stop3" offset="50%" />
-				<stop class="stop4" offset="75%" />
-				<stop class="stop5" offset="100%" />
-			</linearGradient>
-			<radialGradient id="radialGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-				<stop offset="0%" class="stop1" />
-				<stop offset="50%" class="stop2" />
-				<stop offset="100%" class="stop3" />
-			</radialGradient>
-			<!-- Stitch 2 gradients together for seamless animation  -->
-			<pattern id="pattern" x="0" y="0" width="300%" height="100%" patternUnits="userSpaceOnUse">
-				<rect x="0" y="0" width="150%" height="100%" fill="url(#gradient)">
-					<animate attributeType="XML" attributeName="x" from="0" to="150%" dur="7s" repeatCount="indefinite" />
-				</rect>
-				<rect x="-150%" y="0" width="150%" height="100%" fill="url(#gradient)">
-					<animate attributeType="XML" attributeName="x" from="-150%" to="0" dur="7s" repeatCount="indefinite" />
-				</rect>
-			</pattern>
-		</defs>
-		<defs>
-			<filter id="goo">
-				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-				<feBlend in="SourceGraphic" in2="goo" />
-			</filter>
-		</defs>
-		<defs>
-			<filter id="coloredText">
-				<feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="1" seed="20" stitchTiles="stitch" result="turbulence"/>
-				<feMorphology operator="dilate" radius="13" in="turbulence" result="morphology"/>
-				<feColorMatrix type="saturate" values="10" in="morphology" result="colormatrix"/>
-				<feFlood flood-color="#ffffff" flood-opacity="1" result="flood1"/>
-				<feMerge result="merge3">
-					<feMergeNode in="flood1" result="mergeNode7"/>
-					<feMergeNode in="colormatrix" result="mergeNode8"/>
-					<feMergeNode in="colormatrix" result="mergeNode9"/>
-					<feMergeNode in="colormatrix" result="mergeNode10"/>
-				</feMerge>
-				<feComposite in="merge3" in2="SourceGraphic" operator="in" result="composite"/>
-			</filter>
-		</defs>
-		<defs> 
-			<linearGradient id="logoGradient1" x1="0%" y1="50%" x2="100%" y2="50%" > 
-				<stop offset="0%" style="stop-color:rgb(106,216,250);stop-opacity:0.9" />
-				<stop offset="100%" style="stop-color:rgb(39,126,247);stop-opacity:0.7" />
-			</linearGradient>
-			<linearGradient id="logoGradient2" x1="74%" y1="0%" x2="26%" y2="100%" > 
-				<stop offset="0%" style="stop-color:rgb(106,216,250);stop-opacity:1" />
-				<stop offset="51%" style="stop-color:rgb(39,126,247);stop-opacity:0.7" />
-				<stop offset="85%" style="stop-color:rgb(39,126,247);stop-opacity:0.5" />
-			</linearGradient> 
-		</defs>
-	</svg>
 	<style class="dynamic-css"></style>
 </head>
 
 <body class="loading initializing">
+	<div class="filters">
+		<svg class="filter">
+			<defs>
+				<linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" class="stop1"/>
+					<stop offset="100%" class="stop2"/>
+				</linearGradient>
+				<linearGradient id="grid_vertical" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" class="stop1"/>
+					<stop offset="20%" class="stop2"/>
+					<stop offset="80%" class="stop3"/>
+					<stop offset="100%" class="stop4"/>
+				</linearGradient>
+				<linearGradient id="left_lines" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" class="stop1"/>
+					<stop offset="33%" class="stop2"/>
+					<stop offset="66%" class="stop3"/>
+					<stop offset="100%" class="stop4"/>
+				</linearGradient>
+				<linearGradient id="right_lines" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" class="stop1"/>
+					<stop offset="33%" class="stop2"/>
+					<stop offset="66%" class="stop3"/>
+					<stop offset="100%" class="stop4"/>
+				</linearGradient>
+				<linearGradient id="spam_lines_left" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" class="stop1"/>
+					<stop offset="80%" class="stop2"/>
+					<stop offset="100%" class="stop3"/>
+				</linearGradient>
+				<linearGradient id="spam_lines_right" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" class="stop1"/>
+					<stop offset="20%" class="stop2"/>
+					<stop offset="100%" class="stop3"/>
+				</linearGradient>
+				<pattern id="logoStroke" patternUnits="userSpaceOnUse" width="600" height="100">
+					<image x="0" y="0" width="600" height="100" xlink:href="assets/images/logo-stroke.jpg" />
+				</pattern>
+			</defs>
+		</svg>
+		<svg class="filter">
+			<defs>
+				<clipPath id="id0">
+					<path d="M144.39 0.61c79.4,0 143.77,35.23 143.77,78.69 0,43.46 -64.37,78.69 -143.77,78.69 -79.4,0 -143.77,-35.23 -143.77,-78.69 0,-43.46 64.37,-78.69 143.77,-78.69z"></path>
+				</clipPath>
+				<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0">
+					<stop class="stop1" offset="0%" />
+					<stop class="stop2" offset="25%" />
+					<stop class="stop3" offset="50%" />
+					<stop class="stop4" offset="75%" />
+					<stop class="stop5" offset="100%" />
+				</linearGradient>
+				<radialGradient id="radialGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+					<stop offset="0%" class="stop1" />
+					<stop offset="50%" class="stop2" />
+					<stop offset="100%" class="stop3" />
+				</radialGradient>
+				<!-- Stitch 2 gradients together for seamless animation  -->
+				<pattern id="pattern" x="0" y="0" width="300%" height="100%" patternUnits="userSpaceOnUse">
+					<rect x="0" y="0" width="150%" height="100%" fill="url(#gradient)">
+						<animate attributeType="XML" attributeName="x" from="0" to="150%" dur="7s" repeatCount="indefinite" />
+					</rect>
+					<rect x="-150%" y="0" width="150%" height="100%" fill="url(#gradient)">
+						<animate attributeType="XML" attributeName="x" from="-150%" to="0" dur="7s" repeatCount="indefinite" />
+					</rect>
+				</pattern>
+			</defs>
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+					<feBlend in="SourceGraphic" in2="goo" />
+				</filter>
+			</defs>
+			<defs>
+				<filter id="coloredText">
+					<feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="1" seed="20" stitchTiles="stitch" result="turbulence"/>
+					<feMorphology operator="dilate" radius="13" in="turbulence" result="morphology"/>
+					<feColorMatrix type="saturate" values="10" in="morphology" result="colormatrix"/>
+					<feFlood flood-color="#ffffff" flood-opacity="1" result="flood1"/>
+					<feMerge result="merge3">
+						<feMergeNode in="flood1" result="mergeNode7"/>
+						<feMergeNode in="colormatrix" result="mergeNode8"/>
+						<feMergeNode in="colormatrix" result="mergeNode9"/>
+						<feMergeNode in="colormatrix" result="mergeNode10"/>
+					</feMerge>
+					<feComposite in="merge3" in2="SourceGraphic" operator="in" result="composite"/>
+				</filter>
+			</defs>
+			<defs> 
+				<linearGradient id="logoGradient1" x1="0%" y1="50%" x2="100%" y2="50%" > 
+					<stop offset="0%" style="stop-color:rgb(106,216,250);stop-opacity:0.9" />
+					<stop offset="100%" style="stop-color:rgb(39,126,247);stop-opacity:0.7" />
+				</linearGradient>
+				<linearGradient id="logoGradient2" x1="74%" y1="0%" x2="26%" y2="100%" > 
+					<stop offset="0%" style="stop-color:rgb(106,216,250);stop-opacity:1" />
+					<stop offset="51%" style="stop-color:rgb(39,126,247);stop-opacity:0.7" />
+					<stop offset="85%" style="stop-color:rgb(39,126,247);stop-opacity:0.5" />
+				</linearGradient> 
+			</defs>
+		</svg>
+	</div>
 	<div class="pageLoader">
 		<div class="loader">
 			<div class="ring"></div>
@@ -143,43 +146,40 @@
 	</div>
 
 	<header class="panel haeader-panel animated sticky">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="logo">
-						<a href="#">
-							<!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="131.844px" height="22.18px" viewBox="0 0 131.844 22.18" enable-background="new 0 0 131.844 22.18" xml:space="preserve">
-								<path d="M104.074,8.715h23.737c6.202,2.987,4.975,13.465-3.699,13.465h-20.351v-6.337h16.329v-2.315h-1.097h-7.556 C107.342,13.527,104.86,11.312,104.074,8.715z M131.79,0h-20.474c-4.484,0-6.905,2.629-7.387,5.673h27.86V0z M69.151,22.179h12.552 l9.506-13.161v13.161h11.211V8.715H78.819L69.151,22.179z M102.42,0H85.115l-4.051,5.673h21.355V0z M34.542,22.179h12.552 l9.505-13.161v13.161h11.211V8.715H44.209L34.542,22.179z M67.811,0H50.506l-4.052,5.673h21.356V0z M21.868,13.04l-2.987-4.325 H6.094l9.437,13.465h17.67V8.715H21.868V13.04z M33.201,0H21.868v5.673h11.333V0z M12.85,0H0.054L3.99,5.673h12.796L12.85,0z" />
-							</svg> -->
-							<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas.png" alt="">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" href="#">
+				<span class="logo">
+					<img src="http://vass.augurstech.com/update/_landing_page/assets/images/logo.png" alt="">
+				</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Dropdown
 						</a>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<nav class="navbar navbar-expand-lg navbar-light">
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
-								<li class="nav-item">
-									<a href="#">Features</a>
-								</li>
-								<li class="nav-item">
-									<a href="#">Tour</a>
-								</li>
-								<li class="nav-item">
-									<a href="#">Pricing</a>
-								</li>
-								<li class="nav-item">
-									<a href="#">About</a>
-								</li>
-							</ul>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
 						</div>
-					</nav>
-				</div>
-				<div class="col-md-3">
-					<div class="login-signup">
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0 login-signup">
 						<a class="signin btn trackBg" href="#">
 							<span class="bg"></span>
 							<span>Sign In</span>
@@ -188,10 +188,9 @@
 							<span class="bg"></span>
 							<span>Sign Up</span>
 						</a>
-					</div>
-				</div>
+				</form>
 			</div>
-		</div>
+		</nav>
 	</header>
 
 	<div class="ai-chatbox prevent-page-scroll" style="display: none">
@@ -225,11 +224,6 @@
 					<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas-no-shadow.png" alt="">
 				</div>
 				<div class="chat-body">
-					<!-- <div class="date-saperator">30 May, 2018</div>
-					<div class="chat-msg ai-msg">Hello! how may I help you<div class="msg_time">11:20 AM</div></div>
-					<div class="chat-msg user-msg">hello<div class="msg_time">11:20 AM</div></div>
-					<div class="chat-msg user-msg hide-time">hello<div class="msg_time">11:20 AM</div></div>
-					<div class="chat-msg user-msg">hello<div class="msg_time">11:20 AM</div></div> -->
 				</div>
 				<div class="chat-footer">
 					<form action="">
@@ -263,7 +257,7 @@
 							</div>
 							<div class="slide-logo">
 								<div>
-									<img src="http://vass.augurstech.com/update/_landing_page/assets/images/vaas.png" alt="">
+									<img src="http://vass.augurstech.com/update/_landing_page/assets/images/logo.png" alt="">
 								</div>
 								<div class="testClippath"></div>
 							</div>
@@ -1050,7 +1044,7 @@
 	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/bootstrap.min.js"></script>
 	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/jquery.mousewheel.min.js"></script>
 
-	<!-- <script src="_assets/js/wow.min.js"></script> -->
+	<!-- <script src="http://vass.augurstech.com/update/_landing_page/assets/js/wow.min.js"></script> -->
 	<!-- <script src="http://vass.augurstech.com/update/_landing_page/assets/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
 
 	<script src="http://vass.augurstech.com/update/_landing_page/assets/js/three.js"></script>

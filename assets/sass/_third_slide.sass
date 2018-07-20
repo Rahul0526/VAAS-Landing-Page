@@ -36,51 +36,6 @@
 	.content-wrapper
 		padding: 18vw 0
 
-	.joining-section
-		position: absolute
-		z-index: 10
-		// height: calc(50% +
-		&.second-third
-			left: 0
-			top: 0
-			height: 100%
-			.before, .after
-				background-color: #04050A
-				transition: all ease-out 1s 1s
-				z-index: 1
-			.after
-				bottom: 0
-				top: auto
-			.top-flap, .bottom-flap
-				position: absolute
-				width: 100%
-				height: 50%
-				left: 0
-				background-color: #04050A
-				transition: all ease 2s 1.6s
-				transform: skewY(-10deg)
-				z-index: 0
-				&:before
-					content: ''
-					position: absolute
-					left: 0
-					width: 100%
-					height: 1px
-					background-color: $purple
-					transform-origin: center
-					transition: all ease 0.5s 1s
-					transform: scale(0, 1)
-			.top-flap
-				top: 1px
-				transform-origin: bottom center
-				&:before
-					bottom: 0
-			.bottom-flap
-				transform-origin: top center
-				bottom: 1px
-				&:before
-					top: 0
-
 	.backdor
 		.animatedTitle
 			// padding: 50px 0 100px
@@ -114,25 +69,20 @@
 			font-size: 22px
 			font-weight: 300
 			margin-bottom: 28px
-	
-	.backdor, .backdor-shield, .sec-title, p
-		opacity: 0
 
-	&.loaded
-		.backdor, .backdor-shield, .sec-title, p
-			opacity: 1
-
-		.joining-section
-			&.second-third
-				.top-flap, .bottom-flap
-					&:before
-						transform: scale(1,1)
-				.top-flap
-					top: -50%
-				.bottom-flap
-					bottom: -50%
-
-
+	.joining-section
+		position: absolute
+		z-index: 10
+		&.second-third
+			left: 0
+			top: 0
+			height: 100%
+			.before, .after
+				background-color: #04050A
+				z-index: 1
+			.after
+				bottom: 0
+				top: auto
 
 .backdor-shield
 	position: absolute

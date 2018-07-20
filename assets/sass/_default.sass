@@ -68,19 +68,6 @@ img
 	text-decoration: none
 	max-width: 100%
 
-
-
-
-
-header::after
-	background: url(../images/header-right-light.png)
-	position: absolute
-	content: ""
-	width: 364px
-	height: 262px
-	right: 0
-	top: 0
-
 .logo
 	position: absolute
 	z-index: 1
@@ -129,12 +116,25 @@ section.block
 	justify-content: center
 	align-content: center
 
-.filter
+.filters
 	position: absolute
-	width: 500px
-	height: 500px
-	z-index: -99999
+	max-width: 500px
+	width: 100%
+	z-index: 99999
 	opacity: 0
+	pointer-events: none
+	&:before
+		content: ''
+		display: inline-block
+		float: left
+		width: 100%
+		padding-top: 100%
+	.filter
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
 
 
 h3.sec-title
